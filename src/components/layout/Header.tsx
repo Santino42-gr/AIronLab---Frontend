@@ -76,7 +76,8 @@ export const Header: React.FC = () => {
             <img
               src={getImagePath("/images/logo.png")}
               alt="AIronLab Logo"
-              height={12}
+              height={8}
+              width={45}
               className="object-contain"
             />
           </div>
