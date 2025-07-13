@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { ArrowRight, Sparkles, Zap } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { scrollToSection } from "@/lib/utils";
+import { scrollToSection, getImagePath } from "@/lib/utils";
 
 export const HeroSection: React.FC = () => {
   const handleCTAClick = () => {
@@ -37,11 +36,9 @@ export const HeroSection: React.FC = () => {
 
         {/* Заголовок с иконкой */}
         <div className="flex items-center justify-center gap-4 mb-6 animate-slide-up" style={{ animationDelay: "0.6s" }}>
-          <Image
-            src="/images/icon.png"
+          <img
+            src={getImagePath("/images/icon.png")}
             alt="AIronLab Icon"
-            width={80}
-            height={80}
             className="h-16 md:h-20 object-contain"
           />
           <h1 className="text-5xl md:text-7xl font-bold text-black">

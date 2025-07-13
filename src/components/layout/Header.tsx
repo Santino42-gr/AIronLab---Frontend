@@ -1,10 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { cn, scrollToSection } from "@/lib/utils";
+import { cn, scrollToSection, getImagePath } from "@/lib/utils";
 
 const navigationItems = [
   { name: "Главная", href: "#hero", id: "hero" },
@@ -74,10 +73,9 @@ export const Header: React.FC = () => {
         <div className="flex items-center justify-between h-[46.4px]">
           {/* Логотип */}
           <div className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer">
-            <Image
-              src="/images/logo.png"
+            <img
+              src={getImagePath("/images/logo.png")}
               alt="AIronLab Logo"
-              width={120}
               height={12}
               className="object-contain"
             />

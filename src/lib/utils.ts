@@ -31,6 +31,19 @@ export function formatPrice(
 export function scrollToSection(sectionId: string) {
   const element = document.getElementById(sectionId);
   if (element) {
-    element.scrollIntoView({ behavior: "smooth", block: "start" });
+    const headerHeight = 80; // Высота фиксированного хедера
+    const elementPosition = element.offsetTop - headerHeight;
+    
+    window.scrollTo({
+      top: elementPosition,
+      behavior: "smooth"
+    });
   }
+}
+
+// Функция для правильного построения путей к изображениям на GitHub Pages
+export function getImagePath(path: string): string {
+  // В production на GitHub Pages добавляем basePath
+  const basePath = process.env.NODE_ENV === 'production' ? '/AIronLab---Frontend' : '';
+  return `${basePath}${path}`;
 } 
