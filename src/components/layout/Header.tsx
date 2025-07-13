@@ -74,9 +74,10 @@ export const Header: React.FC = () => {
         <div className="flex items-center justify-between h-[46.4px]">
           {/* Логотип */}
           <div className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer">
-            <img
+            <Image
               src="/images/logo.png"
               alt="AIronLab Logo"
+              width={120}
               height={12}
               className="object-contain"
             />
