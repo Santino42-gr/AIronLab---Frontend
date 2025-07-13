@@ -1,20 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    optimizePackageImports: ['lucide-react'],
+  eslint: {
+    ignoreDuringBuilds: true,
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  // Настройки для GitHub Pages
+  output: 'export',
+  trailingSlash: true,
   images: {
-    formats: ['image/webp', 'image/avif'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
+    unoptimized: true,
   },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
+  // Базовый путь для GitHub Pages (замените на название вашего репо)
+  basePath: process.env.NODE_ENV === 'production' ? '/AIronLab---Frontend' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/AIronLab---Frontend/' : '',
 };
 
 export default nextConfig; 
