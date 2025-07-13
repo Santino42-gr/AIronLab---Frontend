@@ -6,6 +6,7 @@ import { BenefitsSection } from "@/components/sections/BenefitsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
 import PricingSection from "@/components/sections/PricingSection";
+import FAQSection from "@/components/sections/FAQSection";
 
 export default function Home() {
   return (
@@ -16,13 +17,7 @@ export default function Home() {
       <ServicesSection />
       <ProjectsSection />
       <PricingSection />
-
-      <section id="faq" className="min-h-screen flex items-center justify-center bg-white">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">FAQ</h2>
-          <p className="text-foreground/80">Часто задаваемые вопросы</p>
-        </div>
-      </section>
+      <FAQSection />
 
       <section id="contact" className="min-h-screen flex items-center justify-center bg-primary text-primary-foreground">
         <div className="text-center">
