@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Sparkles, Zap, Brain, Bot, Cpu, Eye, Network, Database, Activity, Layers, Lightbulb, CircuitBoard, Star } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Brain, Bot, Cpu, Eye, Network, Database, Activity, Layers, Lightbulb, CircuitBoard } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { scrollToSection, getImagePath } from "@/lib/utils";
 
@@ -85,46 +85,6 @@ export const HeroSection: React.FC = () => {
             <CircuitBoard className="h-5 w-5 text-primary" />
           </div>
         </div>
-
-        {/* Интерактивные частицы в рандомных позициях */}
-        <div className="absolute top-[28%] left-[72%] w-2 h-2 bg-accent rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-[43%] right-[15%] w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "1.3s" }}></div>
-        <div className="absolute bottom-[28%] left-[18%] w-2 h-2 bg-accent rounded-full animate-pulse opacity-60" style={{ animationDelay: "2.1s" }}></div>
-        <div className="absolute bottom-[15%] right-[35%] w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "0.7s" }}></div>
-        <div className="absolute top-[38%] left-[93%] w-2 h-2 bg-accent rounded-full animate-pulse opacity-60" style={{ animationDelay: "1.8s" }}></div>
-        <div className="absolute bottom-[35%] right-[8%] w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "1.1s" }}></div>
-        <div className="absolute top-[52%] left-[78%] w-2 h-2 bg-accent rounded-full animate-pulse opacity-60" style={{ animationDelay: "0.4s" }}></div>
-        <div className="absolute bottom-[48%] left-[28%] w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "2.5s" }}></div>
-
-        {/* Геометрические фигуры с ИИ-тематикой */}
-        <div className="absolute top-[25%] right-[22%] w-12 h-12 border-2 border-accent/30 rotate-45 animate-spin-slow hover:border-accent hover:scale-110 transition-all duration-300 cursor-pointer pointer-events-auto"></div>
-        <div className="absolute top-[78%] left-[22%] w-16 h-16 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full animate-pulse hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto"></div>
-        <div className="absolute top-[48%] right-[5%] w-10 h-10 border-2 border-primary/30 rounded-full animate-spin-slow hover:border-primary hover:scale-110 transition-all duration-300 cursor-pointer pointer-events-auto" style={{ animationDelay: "3.2s" }}></div>
-        <div className="absolute top-[65%] left-[68%] w-14 h-14 border-2 border-accent/30 rotate-12 animate-spin-slow hover:border-accent hover:scale-110 transition-all duration-300 cursor-pointer pointer-events-auto" style={{ animationDelay: "1.8s" }}></div>
-        <div className="absolute top-[18%] left-[82%] w-8 h-8 bg-gradient-to-r from-accent/20 to-primary/20 rotate-45 animate-pulse hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto" style={{ animationDelay: "2.7s" }}></div>
-        
-        {/* ИИ звёздочки в рандомных позициях */}
-        <div className="absolute top-[13%] left-[28%] animate-twinkle">
-          <Star className="h-4 w-4 text-accent/60" />
-        </div>
-        <div className="absolute top-[85%] right-[28%] animate-twinkle" style={{ animationDelay: "1.8s" }}>
-          <Star className="h-3 w-3 text-primary/60" />
-        </div>
-        <div className="absolute top-[32%] right-[45%] animate-twinkle" style={{ animationDelay: "1.2s" }}>
-          <Star className="h-4 w-4 text-accent/60" />
-        </div>
-        <div className="absolute top-[72%] left-[75%] animate-twinkle" style={{ animationDelay: "2.8s" }}>
-          <Star className="h-3 w-3 text-primary/60" />
-        </div>
-        <div className="absolute top-[55%] right-[82%] animate-twinkle" style={{ animationDelay: "2.2s" }}>
-          <Star className="h-4 w-4 text-accent/60" />
-        </div>
-        <div className="absolute top-[88%] left-[85%] animate-twinkle" style={{ animationDelay: "0.9s" }}>
-          <Star className="h-3 w-3 text-primary/60" />
-        </div>
-        <div className="absolute top-[5%] left-[52%] animate-twinkle" style={{ animationDelay: "3.1s" }}>
-          <Star className="h-4 w-4 text-accent/60" />
-        </div>
       </div>
 
       <div className="container-custom text-center relative z-10">
@@ -138,10 +98,6 @@ export const HeroSection: React.FC = () => {
 
         {/* Заголовок с иконкой и интерактивными элементами */}
         <div className="relative">
-          {/* Декоративные элементы вокруг заголовка */}
-          <div className="absolute -top-4 -left-4 w-8 h-8 bg-gradient-to-r from-accent/30 to-primary/30 rounded-full animate-bounce opacity-60" style={{ animationDelay: "0.5s" }}></div>
-          <div className="absolute -top-2 -right-6 w-6 h-6 bg-gradient-to-r from-primary/30 to-accent/30 rounded-full animate-bounce opacity-60" style={{ animationDelay: "1s" }}></div>
-          
           <div className="flex items-center justify-center gap-4 mb-6 animate-slide-up hover:scale-105 transition-transform duration-500" style={{ animationDelay: "0.6s" }}>
             <img
               src={getImagePath("/images/icon.png")}
@@ -154,25 +110,15 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Подзаголовок с декоративными элементами */}
+        {/* Подзаголовок */}
         <div className="relative">
-          <div className="absolute -left-8 top-1/2 w-4 h-4 bg-accent/40 rounded-full animate-pulse"></div>
-          <div className="absolute -right-8 top-1/2 w-4 h-4 bg-primary/40 rounded-full animate-pulse" style={{ animationDelay: "0.5s" }}></div>
-          
           <p className="text-xl md:text-2xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up hover:text-foreground/90 transition-colors duration-300" style={{ animationDelay: "0.9s" }}>
             Уникальные ИИ-решения для вашего бизнеса
           </p>
         </div>
 
-        {/* Дополнительное описание с интерактивными элементами */}
+        {/* Дополнительное описание */}
         <div className="relative">
-          <div className="absolute -top-2 left-1/4 animate-float">
-            <Sparkles className="h-5 w-5 text-accent/50" />
-          </div>
-          <div className="absolute -bottom-2 right-1/4 animate-float-delayed">
-            <Brain className="h-5 w-5 text-primary/50" />
-          </div>
-          
           <p className="text-lg text-foreground/60 mb-12 max-w-2xl mx-auto animate-fade-in hover:text-foreground/80 transition-colors duration-300" style={{ animationDelay: "1.2s" }}>
             Автоматизируем процессы, анализируем данные в реальном времени и создаем персонализированный опыт для ваших клиентов
           </p>
