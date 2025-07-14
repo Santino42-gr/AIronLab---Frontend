@@ -59,9 +59,9 @@ export const ProjectsSection: React.FC = () => {
       results: [
         { metric: "Обращений в день", value: "150+", improvement: "+150%" },
         { metric: "Точность анализа", value: "95%", improvement: "+95%" },
-        { metric: "Время консультации", value: "< 3 мин", improvement: "-85%" }
+        { metric: "Время консультации", value: "< 15 сек", improvement: "-95%" }
       ],
-      technologies: ["Telegram Bot API", "OpenAI GPT-4", "Python", "FastAPI", "PostgreSQL"],
+      technologies: ["n8n", "Telegram Bot API", "OpenAI GPT-4", "JavaScript", "Supabase", "FastAPI"],
       timeline: "2 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
@@ -72,13 +72,13 @@ export const ProjectsSection: React.FC = () => {
       title: "B2B чат-бот менеджер",
       category: "automation",
       client: "ОптималБух",
-      description: "Интеллектуальный бот-менеджер на сайте для консультации B2B клиентов по бухгалтерским услугам, генерации предложений и автоматического добавления сделок в CRM.",
+      description: "Интеллектуальный бот-менеджер на сайте для консультации B2B клиентов по бухгалтерским услугам, генерации предложений и автоматического добавления сделок в CRM Bitrix24.",
       results: [
         { metric: "Конверсия в лиды", value: "240%", improvement: "+140%" },
-        { metric: "Время отклика", value: "< 1 сек", improvement: "-98%" },
-        { metric: "Автоматизация CRM", value: "100%", improvement: "+100%" }
+        { metric: "Время отклика", value: "< 10 сек", improvement: "-99%" },
+        { metric: "Автоматизация CRM (Bitrix24)", value: "100%", improvement: "+100%" }
       ],
-      technologies: ["React", "OpenAI GPT", "amoCRM API", "Node.js", "WebSocket"],
+      technologies: ["Voiceflow", "React", "OpenAI GPT-4", "JavaScript", "Supabase", "Bitrix24", "WebSocket"],
       timeline: "1.5 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
@@ -89,13 +89,13 @@ export const ProjectsSection: React.FC = () => {
       title: "Чат-бот для маркетплейса Авито",
       category: "automation",
       client: "ОптималБух",
-      description: "Автоматизированный бот для ведения переписки с клиентами на Авито, интеграция с CRM системой для отслеживания лидов и повышения качества обслуживания.",
+      description: "Автоматизированный бот для ведения переписки с клиентами на Авито, интеграция с CRM Bitrix24 для отслеживания лидов и повышения качества обслуживания.",
       results: [
-        { metric: "Скорость ответов", value: "500%", improvement: "+400%" },
+        { metric: "Скорость ответов", value: "120%", improvement: "+120%" },
         { metric: "Качество лидов", value: "85%", improvement: "+35%" },
         { metric: "Экономия времени", value: "40 ч/нед", improvement: "-80%" }
       ],
-      technologies: ["Avito API", "Python", "amoCRM API", "Redis", "Celery"],
+      technologies: ["n8n", "Avito API", "JavaScript", "Supabase", "Bitrix24", "Redis"],
       timeline: "3 недели",
       image: "/api/placeholder/400/250",
       featured: false,
@@ -112,7 +112,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Автоматизация записи", value: "95%", improvement: "+95%" },
         { metric: "Удовлетворенность", value: "98%", improvement: "+25%" }
       ],
-      technologies: ["Model Context Protocol", "Python", "FastAPI", "React", "PostgreSQL", "OpenAI"],
+      technologies: ["Model Context Protocol", "TypeScript", "Railway", "n8n", "React", "Supabase", "OpenAI"],
       timeline: "4 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
@@ -129,7 +129,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "SEO трафик", value: "85%", improvement: "+85%" },
         { metric: "Экономия бюджета", value: "2.5М ₽", improvement: "+70%" }
       ],
-      technologies: ["OpenAI GPT-4", "Python", "React", "Elasticsearch", "Apache Kafka"],
+      technologies: ["n8n", "OpenAI GPT-4", "JavaScript", "Supabase", "React", "Elasticsearch"],
       timeline: "3 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
@@ -146,7 +146,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Сокращение остатков", value: "35%", improvement: "-35%" },
         { metric: "Рост оборота", value: "28%", improvement: "+28%" }
       ],
-      technologies: ["Python", "Scikit-learn", "TensorFlow", "Apache Airflow", "Tableau", "PostgreSQL"],
+      technologies: ["n8n", "Python", "Supabase", "Tableau", "JavaScript", "Scikit-learn"],
       timeline: "5 месяцев",
       image: "/api/placeholder/400/250",
       featured: false,
@@ -163,7 +163,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Время ожидания", value: "< 30 сек", improvement: "-75%" },
         { metric: "Удовлетворенность", value: "89%", improvement: "+15%" }
       ],
-      technologies: ["Speech-to-Text", "OpenAI Whisper", "Python", "Asterisk", "React", "WebRTC"],
+      technologies: ["Voiceflow", "OpenAI Whisper", "JavaScript", "Supabase", "React", "WebRTC"],
       timeline: "4 месяца",
       image: "/api/placeholder/400/250",
       featured: false,
