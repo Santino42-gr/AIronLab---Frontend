@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowRight, Sparkles, Zap, Brain, Bot, Cpu, Eye, Network, Database, Activity, Layers, Lightbulb, CircuitBoard } from "lucide-react";
+import { ArrowRight, Sparkles, Zap, Brain, Bot, Cpu, Eye, Network, Database, Activity, Layers, Lightbulb, CircuitBoard, Settings, Workflow, Radar, Search, Cloud, Monitor, Atom } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { scrollToSection, getImagePath } from "@/lib/utils";
 
@@ -25,7 +25,7 @@ export const HeroSection: React.FC = () => {
 
       {/* ИИ интерактивные элементы */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* ИИ иконки в рандомных позициях */}
+        {/* ИИ иконки в безопасных позициях - не наплывают на текст */}
         <div className="absolute top-[15%] left-[8%] animate-float group-hover:scale-110 transition-transform duration-300">
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
             <Brain className="h-7 w-7 text-accent" />
@@ -80,40 +80,52 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-[12%] left-[35%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.7s" }}>
+        <div className="absolute top-[5%] left-[25%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.7s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
             <CircuitBoard className="h-5 w-5 text-primary" />
           </div>
         </div>
 
-        {/* Дополнительные ИИ-элементы для заполнения пространства */}
-        <div className="absolute top-[85%] left-[35%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.9s" }}>
+        {/* Дополнительные уникальные ИИ-элементы в безопасных зонах */}
+        <div className="absolute top-[85%] left-[25%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.9s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
-            <Brain className="h-6 w-6 text-accent" />
+            <Settings className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[28%] right-[35%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.7s" }}>
+        <div className="absolute top-[18%] right-[25%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.7s" }}>
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
-            <Network className="h-6 w-6 text-primary" />
+            <Workflow className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[42%] right-[8%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
+        <div className="absolute top-[42%] right-[5%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
-            <Activity className="h-5 w-5 text-accent" />
+            <Radar className="h-5 w-5 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[88%] right-[18%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.4s" }}>
+        <div className="absolute top-[88%] right-[15%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.4s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
-            <Cpu className="h-6 w-6 text-primary" />
+            <Search className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[72%] left-[75%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.3s" }}>
+        <div className="absolute top-[82%] left-[82%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.3s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
-            <Lightbulb className="h-5 w-5 text-accent" />
+            <Cloud className="h-5 w-5 text-accent" />
+          </div>
+        </div>
+
+        <div className="absolute top-[12%] right-[75%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "3.1s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Monitor className="h-6 w-6 text-primary" />
+          </div>
+        </div>
+
+        <div className="absolute top-[92%] left-[65%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.8s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Atom className="h-5 w-5 text-accent" />
           </div>
         </div>
       </div>
