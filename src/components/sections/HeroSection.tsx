@@ -163,7 +163,7 @@ export const HeroSection: React.FC = () => {
         {/* Дополнительное описание */}
         <div className="relative">
           <p className="text-lg text-foreground/60 mb-12 max-w-2xl mx-auto animate-fade-in hover:text-foreground/80 transition-colors duration-300" style={{ animationDelay: "1.2s" }}>
-            Автоматизируем процессы, анализируем данные в реальном времени и создаем персонализированный опыт для ваших клиентов
+            Автоматизируем рост выручки, оптимизируем ресурсы компании и создаём устойчивые конкурентные преимущества
           </p>
         </div>
 
