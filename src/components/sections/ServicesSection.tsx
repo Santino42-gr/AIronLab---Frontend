@@ -9,7 +9,6 @@ import {
   MessageSquareText, 
   Brain,
   ArrowRight,
-  Play,
   CheckCircle,
   Sparkles,
   Users,
@@ -205,18 +204,7 @@ export const ServicesSection: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Кнопка действия */}
-                <div className="flex items-center justify-between">
-                  <button className="flex items-center space-x-2 text-accent opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-2">
-                    <Play className="h-4 w-4" />
-                    <span className="text-sm font-medium">Демо</span>
-                  </button>
-                  
-                  <button className="flex items-center space-x-2 text-accent font-medium hover:translate-x-1 transition-transform duration-300">
-                    <span className="text-sm">Подробнее</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </button>
-                </div>
+
               </div>
             </div>
           ))}
@@ -242,17 +230,6 @@ export const ServicesSection: React.FC = () => {
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                className="min-w-[200px] bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
-              >
-                <span className="flex items-center space-x-2">
-                  <Play className="h-5 w-5 text-accent" />
-                  <span>Смотреть демо</span>
-                </span>
               </Button>
             </div>
 
