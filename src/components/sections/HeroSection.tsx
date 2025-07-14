@@ -56,7 +56,7 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-[82%] left-[45%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.3s" }}>
+        <div className="absolute top-[55%] left-[15%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.3s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
             <Database className="h-6 w-6 text-primary" />
           </div>
@@ -83,6 +83,37 @@ export const HeroSection: React.FC = () => {
         <div className="absolute top-[12%] left-[35%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.7s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
             <CircuitBoard className="h-5 w-5 text-primary" />
+          </div>
+        </div>
+
+        {/* Дополнительные ИИ-элементы для заполнения пространства */}
+        <div className="absolute top-[85%] left-[35%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.9s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Brain className="h-6 w-6 text-accent" />
+          </div>
+        </div>
+
+        <div className="absolute top-[28%] right-[35%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.7s" }}>
+          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Network className="h-6 w-6 text-primary" />
+          </div>
+        </div>
+
+        <div className="absolute top-[42%] right-[8%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Activity className="h-5 w-5 text-accent" />
+          </div>
+        </div>
+
+        <div className="absolute top-[88%] right-[18%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.4s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Cpu className="h-6 w-6 text-primary" />
+          </div>
+        </div>
+
+        <div className="absolute top-[72%] left-[75%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.3s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Lightbulb className="h-5 w-5 text-accent" />
           </div>
         </div>
       </div>
