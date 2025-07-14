@@ -339,10 +339,6 @@ export const ProjectsSection: React.FC = () => {
                     <ArrowRight className="h-4 w-4" />
                   </button>
                   
-                  <button className="flex items-center space-x-1 text-accent opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <ExternalLink className="h-4 w-4" />
-                    <span className="text-sm">Кейс</span>
-                  </button>
                 </div>
               </div>
             </div>
