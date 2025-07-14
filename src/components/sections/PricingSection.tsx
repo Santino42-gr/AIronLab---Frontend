@@ -82,7 +82,7 @@ const pricingPlans: PricingPlan[] = [
       'Права на исходный код',
       'Создать кастомное решение'
     ],
-    buttonText: 'Создать уникальное',
+    buttonText: 'Создать уникальное решение',
     color: 'from-orange-500 to-red-500'
   }
 ];
