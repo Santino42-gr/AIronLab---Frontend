@@ -24,7 +24,7 @@ export const BenefitsSection: React.FC = () => {
       icon: <Clock className="h-8 w-8 text-accent" />,
       title: "Работа 24/7",
       description: "Наши ИИ-системы работают круглосуточно без перерывов, обеспечивая непрерывную поддержку бизнеса",
-      stats: "99.9% uptime"
+      stats: "Без выходных"
     },
     {
       icon: <Target className="h-8 w-8 text-accent" />,
@@ -119,11 +119,7 @@ export const BenefitsSection: React.FC = () => {
                   {benefit.description}
                 </p>
 
-                {/* Стрелка */}
-                <div className="mt-6 flex items-center text-accent opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-2">
-                  <span className="text-sm font-medium mr-2">Узнать больше</span>
-                  <ArrowRight className="h-4 w-4" />
-                </div>
+
               </div>
             </div>
           ))}
@@ -167,8 +163,8 @@ export const BenefitsSection: React.FC = () => {
                   <div className="text-sm text-foreground/60">Отраслей</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.4s" }}>
-                  <div className="text-3xl font-bold text-accent mb-2">2M+</div>
-                  <div className="text-sm text-foreground/60">Обработанных запросов</div>
+                  <div className="text-3xl font-bold text-accent mb-2">500+</div>
+                  <div className="text-sm text-foreground/60">Сэкономленных часов</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.5s" }}>
                   <div className="text-3xl font-bold text-accent mb-2">98%</div>
