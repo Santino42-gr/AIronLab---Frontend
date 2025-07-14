@@ -54,7 +54,6 @@ export const metadata: Metadata = {
   description: "Мы создаем инновационные решения на основе искусственного интеллекта, которые помогают бизнесу расти и развиваться. Аналитика в реальном времени, автоматизация процессов и персонализация.",
   keywords: "ИИ, искусственный интеллект, AI, машинное обучение, автоматизация, бизнес решения",
   authors: [{ name: "AIronLab" }],
-  viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     title: "AIronLab - Уникальные ИИ-решения для вашего бизнеса",
@@ -62,6 +61,11 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
   },
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
