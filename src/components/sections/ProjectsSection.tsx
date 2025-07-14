@@ -16,7 +16,6 @@ import {
   Bot,
   BarChart3,
   Brain,
-  Eye,
   Filter
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
@@ -47,109 +46,125 @@ export const ProjectsSection: React.FC = () => {
     { id: "all", name: "Все проекты", icon: <Briefcase className="h-4 w-4" /> },
     { id: "automation", name: "Автоматизация", icon: <Bot className="h-4 w-4" /> },
     { id: "analytics", name: "Аналитика", icon: <BarChart3 className="h-4 w-4" /> },
-    { id: "ml", name: "Машинное обучение", icon: <Brain className="h-4 w-4" /> },
-    { id: "vision", name: "Компьютерное зрение", icon: <Eye className="h-4 w-4" /> }
+    { id: "communications", name: "Коммуникации", icon: <Brain className="h-4 w-4" /> }
   ];
 
   const projects: Project[] = [
     {
       id: 1,
-      title: "ИИ-ассистент для интернет-магазина",
+      title: "Чат-бот юридической поддержки",
       category: "automation",
-      client: "Крупная e-commerce сеть",
-      description: "Разработка умного чат-бота для автоматизации продаж, обработки заказов и консультации клиентов с интеграцией в CRM систему.",
+      client: "Партия «Новые люди»",
+      description: "Telegram-бот для первичной юридической поддержки граждан. Анализирует юридические документы, проверяет корректность договоров и дает правовые рекомендации.",
       results: [
-        { metric: "Рост конверсии", value: "185%", improvement: "+85%" },
-        { metric: "Время ответа", value: "< 2 сек", improvement: "-95%" },
-        { metric: "Обработка заявок", value: "24/7", improvement: "+200%" }
+        { metric: "Обращений в день", value: "150+", improvement: "+150%" },
+        { metric: "Точность анализа", value: "95%", improvement: "+95%" },
+        { metric: "Время консультации", value: "< 3 мин", improvement: "-85%" }
       ],
-      technologies: ["OpenAI GPT", "Python", "FastAPI", "PostgreSQL", "React"],
-      timeline: "3 месяца",
+      technologies: ["Telegram Bot API", "OpenAI GPT-4", "Python", "FastAPI", "PostgreSQL"],
+      timeline: "2 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
       status: "completed"
     },
     {
       id: 2,
-      title: "Система предиктивной аналитики",
-      category: "analytics",
-      client: "Производственная компания",
-      description: "ML-модель для прогнозирования спроса, оптимизации запасов и планирования производства на основе исторических данных.",
+      title: "B2B чат-бот менеджер",
+      category: "automation",
+      client: "ОптималБух",
+      description: "Интеллектуальный бот-менеджер на сайте для консультации B2B клиентов по бухгалтерским услугам, генерации предложений и автоматического добавления сделок в CRM.",
       results: [
-        { metric: "Точность прогнозов", value: "94%", improvement: "+34%" },
-        { metric: "Сокращение запасов", value: "40%", improvement: "-40%" },
-        { metric: "Экономия бюджета", value: "12М ₽", improvement: "+25%" }
+        { metric: "Конверсия в лиды", value: "240%", improvement: "+140%" },
+        { metric: "Время отклика", value: "< 1 сек", improvement: "-98%" },
+        { metric: "Автоматизация CRM", value: "100%", improvement: "+100%" }
       ],
-      technologies: ["Python", "Scikit-learn", "TensorFlow", "Apache Airflow", "Tableau"],
-      timeline: "4 месяца",
+      technologies: ["React", "OpenAI GPT", "amoCRM API", "Node.js", "WebSocket"],
+      timeline: "1.5 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
       status: "completed"
     },
     {
       id: 3,
-      title: "Рекомендательная система",
-      category: "ml",
-      client: "Медиа платформа",
-      description: "Персонализированные рекомендации контента на базе машинного обучения для увеличения времени пребывания пользователей.",
+      title: "Чат-бот для маркетплейса Авито",
+      category: "automation",
+      client: "ОптималБух",
+      description: "Автоматизированный бот для ведения переписки с клиентами на Авито, интеграция с CRM системой для отслеживания лидов и повышения качества обслуживания.",
       results: [
-        { metric: "Время сессии", value: "+127%", improvement: "+127%" },
-        { metric: "CTR", value: "8.4%", improvement: "+240%" },
-        { metric: "Retention", value: "73%", improvement: "+45%" }
+        { metric: "Скорость ответов", value: "500%", improvement: "+400%" },
+        { metric: "Качество лидов", value: "85%", improvement: "+35%" },
+        { metric: "Экономия времени", value: "40 ч/нед", improvement: "-80%" }
       ],
-      technologies: ["PyTorch", "Redis", "Kafka", "MongoDB", "Docker"],
-      timeline: "5 месяцев",
+      technologies: ["Avito API", "Python", "amoCRM API", "Redis", "Celery"],
+      timeline: "3 недели",
       image: "/api/placeholder/400/250",
       featured: false,
       status: "completed"
     },
     {
       id: 4,
-      title: "Контроль качества на производстве",
-      category: "vision",
-      client: "Автомобильный завод",
-      description: "Система компьютерного зрения для автоматического контроля качества деталей и выявления дефектов на конвейере.",
+      title: "MCP сервер для бьюти-бизнеса",
+      category: "automation",
+      client: "Конфиденциально",
+      description: "Разработка и интеграция собственного MCP сервера для создания ИИ-администратора бьюти-салона. Консультирует клиентов, записывает на услуги и управляет расписанием.",
       results: [
-        { metric: "Выявление дефектов", value: "99.2%", improvement: "+15%" },
-        { metric: "Время проверки", value: "0.3 сек", improvement: "-98%" },
-        { metric: "Снижение брака", value: "78%", improvement: "-78%" }
+        { metric: "Загрузка салона", value: "180%", improvement: "+80%" },
+        { metric: "Автоматизация записи", value: "95%", improvement: "+95%" },
+        { metric: "Удовлетворенность", value: "98%", improvement: "+25%" }
       ],
-      technologies: ["OpenCV", "YOLO", "PyTorch", "FastAPI", "NVIDIA Jetson"],
-      timeline: "6 месяцев",
+      technologies: ["Model Context Protocol", "Python", "FastAPI", "React", "PostgreSQL", "OpenAI"],
+      timeline: "4 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
       status: "ongoing"
     },
     {
       id: 5,
-      title: "Аналитика клиентского поведения",
-      category: "analytics",
-      client: "Ритейл сеть",
-      description: "Комплексная аналитическая платформа для отслеживания поведения покупателей и оптимизации маркетинговых кампаний.",
+      title: "Контент завод для e-commerce",
+      category: "communications",
+      client: "Крупная торговая сеть",
+      description: "Автоматизированная система массового производства контента: описания товаров, SEO-тексты, карточки продуктов и маркетинговые материалы с использованием ИИ.",
       results: [
-        { metric: "ROI маркетинга", value: "320%", improvement: "+120%" },
-        { metric: "Персонализация", value: "89%", improvement: "+89%" },
-        { metric: "LTV клиентов", value: "+56%", improvement: "+56%" }
+        { metric: "Скорость создания", value: "1200%", improvement: "+1100%" },
+        { metric: "SEO трафик", value: "85%", improvement: "+85%" },
+        { metric: "Экономия бюджета", value: "2.5М ₽", improvement: "+70%" }
       ],
-      technologies: ["Apache Spark", "Elasticsearch", "Kibana", "Python", "PostgreSQL"],
-      timeline: "4 месяца",
+      technologies: ["OpenAI GPT-4", "Python", "React", "Elasticsearch", "Apache Kafka"],
+      timeline: "3 месяца",
+      image: "/api/placeholder/400/250",
+      featured: true,
+      status: "completed"
+    },
+    {
+      id: 6,
+      title: "Система аналитики продаж",
+      category: "analytics",
+      client: "Федеральная ритейл сеть",
+      description: "Комплексная система предиктивной аналитики для прогнозирования спроса, оптимизации ассортимента и планирования закупок на основе ML-алгоритмов.",
+      results: [
+        { metric: "Точность прогнозов", value: "92%", improvement: "+42%" },
+        { metric: "Сокращение остатков", value: "35%", improvement: "-35%" },
+        { metric: "Рост оборота", value: "28%", improvement: "+28%" }
+      ],
+      technologies: ["Python", "Scikit-learn", "TensorFlow", "Apache Airflow", "Tableau", "PostgreSQL"],
+      timeline: "5 месяцев",
       image: "/api/placeholder/400/250",
       featured: false,
       status: "completed"
     },
     {
-      id: 6,
-      title: "Автоматизация документооборота",
-      category: "automation",
-      client: "Финансовая организация",
-      description: "RPA-решение для автоматической обработки документов, извлечения данных и интеграции с корпоративными системами.",
+      id: 7,
+      title: "Голосовой ассистент call-центра",
+      category: "communications",
+      client: "Страховая компания",
+      description: "ИИ-система для автоматизации обработки входящих звонков: распознавание речи, анализ запросов, маршрутизация обращений и предоставление первичной консультации.",
       results: [
-        { metric: "Скорость обработки", value: "900%", improvement: "+800%" },
-        { metric: "Точность данных", value: "99.7%", improvement: "+12%" },
-        { metric: "Экономия времени", value: "80 ч/день", improvement: "-85%" }
+        { metric: "Автоматизация звонков", value: "70%", improvement: "+70%" },
+        { metric: "Время ожидания", value: "< 30 сек", improvement: "-75%" },
+        { metric: "Удовлетворенность", value: "89%", improvement: "+15%" }
       ],
-      technologies: ["UiPath", "Python", "OCR", "SAP", "REST API"],
-      timeline: "3 месяца",
+      technologies: ["Speech-to-Text", "OpenAI Whisper", "Python", "Asterisk", "React", "WebRTC"],
+      timeline: "4 месяца",
       image: "/api/placeholder/400/250",
       featured: false,
       status: "completed"
@@ -165,8 +180,8 @@ export const ProjectsSection: React.FC = () => {
   const stats = {
     totalProjects: projects.length,
     completedProjects: projects.filter(p => p.status === "completed").length,
-    avgImprovement: "156%",
-    clientSatisfaction: "98%"
+    avgImprovement: "180%",
+    clientSatisfaction: "96%"
   };
 
   return (
@@ -267,8 +282,7 @@ export const ProjectsSection: React.FC = () => {
                   <div className="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center">
                     {project.category === "automation" && <Bot className="h-10 w-10 text-accent" />}
                     {project.category === "analytics" && <BarChart3 className="h-10 w-10 text-accent" />}
-                    {project.category === "ml" && <Brain className="h-10 w-10 text-accent" />}
-                    {project.category === "vision" && <Eye className="h-10 w-10 text-accent" />}
+                    {project.category === "communications" && <Brain className="h-10 w-10 text-accent" />}
                   </div>
                 </div>
               </div>
