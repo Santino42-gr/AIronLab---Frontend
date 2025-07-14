@@ -32,42 +32,64 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
         
-        <div className="absolute top-1/3 right-1/6 animate-float-delayed group-hover:scale-110 transition-transform duration-300">
+        <div className="absolute top-1/5 right-1/4 animate-float-delayed group-hover:scale-110 transition-transform duration-300">
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
             <Code2 className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-2/3 left-1/8 animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1s" }}>
+        <div className="absolute top-3/5 left-1/12 animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1s" }}>
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
             <Rocket className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-2/3 right-1/8 animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.5s" }}>
+        <div className="absolute top-2/3 right-1/12 animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.5s" }}>
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
             <Target className="h-6 w-6 text-primary" />
           </div>
         </div>
 
+        {/* Дополнительные иконки для более равномерного распределения */}
+        <div className="absolute top-1/3 left-3/4 animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.5s" }}>
+          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Sparkles className="h-5 w-5 text-accent" />
+          </div>
+        </div>
+
+        <div className="absolute top-4/5 left-1/2 animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2s" }}>
+          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+            <Shield className="h-5 w-5 text-primary" />
+          </div>
+        </div>
+
         {/* Интерактивные частицы */}
-        <div className="absolute top-1/5 left-1/3 w-2 h-2 bg-accent rounded-full animate-pulse opacity-60"></div>
-        <div className="absolute top-1/6 right-1/3 w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "1s" }}></div>
-        <div className="absolute bottom-1/4 left-1/5 w-2 h-2 bg-accent rounded-full animate-pulse opacity-60" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute bottom-1/5 right-1/4 w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute top-1/6 left-2/3 w-2 h-2 bg-accent rounded-full animate-pulse opacity-60"></div>
+        <div className="absolute top-1/3 right-1/5 w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "1s" }}></div>
+        <div className="absolute bottom-1/3 left-1/4 w-2 h-2 bg-accent rounded-full animate-pulse opacity-60" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute bottom-1/6 right-2/3 w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "0.5s" }}></div>
+        <div className="absolute top-2/5 left-4/5 w-2 h-2 bg-accent rounded-full animate-pulse opacity-60" style={{ animationDelay: "1.5s" }}></div>
+        <div className="absolute bottom-2/5 right-1/6 w-3 h-3 bg-primary rounded-full animate-ping opacity-40" style={{ animationDelay: "0.8s" }}></div>
 
         {/* Геометрические фигуры с hover эффектами */}
-        <div className="absolute top-1/2 left-10 w-16 h-16 border-2 border-accent/30 rotate-45 animate-spin-slow hover:border-accent hover:scale-110 transition-all duration-300 cursor-pointer pointer-events-auto"></div>
-        <div className="absolute top-1/3 right-10 w-12 h-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full animate-pulse hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto"></div>
+        <div className="absolute top-1/4 right-1/8 w-16 h-16 border-2 border-accent/30 rotate-45 animate-spin-slow hover:border-accent hover:scale-110 transition-all duration-300 cursor-pointer pointer-events-auto"></div>
+        <div className="absolute top-3/4 left-1/5 w-12 h-12 bg-gradient-to-r from-primary/20 to-accent/20 rounded-full animate-pulse hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto"></div>
+        <div className="absolute top-1/2 right-1/4 w-14 h-14 border-2 border-primary/30 rounded-full animate-spin-slow hover:border-primary hover:scale-110 transition-all duration-300 cursor-pointer pointer-events-auto" style={{ animationDelay: "3s" }}></div>
         
         {/* Дополнительные звёздочки */}
-        <div className="absolute top-1/6 left-1/2 animate-twinkle">
+        <div className="absolute top-1/8 left-1/3 animate-twinkle">
           <Star className="h-4 w-4 text-accent/60" />
         </div>
-        <div className="absolute top-3/4 left-2/3 animate-twinkle" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute top-5/6 right-1/3 animate-twinkle" style={{ animationDelay: "1.5s" }}>
           <Star className="h-3 w-3 text-primary/60" />
         </div>
-        <div className="absolute top-1/4 right-1/5 animate-twinkle" style={{ animationDelay: "0.8s" }}>
+        <div className="absolute top-1/6 right-1/6 animate-twinkle" style={{ animationDelay: "0.8s" }}>
+          <Star className="h-4 w-4 text-accent/60" />
+        </div>
+        <div className="absolute top-4/5 left-2/3 animate-twinkle" style={{ animationDelay: "2.2s" }}>
+          <Star className="h-3 w-3 text-primary/60" />
+        </div>
+        <div className="absolute top-2/5 right-4/5 animate-twinkle" style={{ animationDelay: "1.8s" }}>
           <Star className="h-4 w-4 text-accent/60" />
         </div>
       </div>
