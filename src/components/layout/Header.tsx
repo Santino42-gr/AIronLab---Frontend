@@ -5,13 +5,21 @@ import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 import { cn, scrollToSection, getImagePath } from "@/lib/utils";
 
-const navigationItems = [
+interface NavigationItem {
+  name: string;
+  href: string;
+  id: string;
+  isExternal?: boolean;
+}
+
+const navigationItems: NavigationItem[] = [
   { name: "Главная", href: "#hero", id: "hero" },
   { name: "Преимущества", href: "#benefits", id: "benefits" },
   { name: "Услуги", href: "#services", id: "services" },
   { name: "Проекты", href: "#projects", id: "projects" },
   { name: "Тарифы", href: "#pricing", id: "pricing" },
   { name: "FAQ", href: "#faq", id: "faq" },
+  { name: "Блог", href: "/blog", id: "blog", isExternal: true },
 ];
 
 export const Header: React.FC = () => {
@@ -46,8 +54,18 @@ export const Header: React.FC = () => {
     };
   }, []);
 
-  const handleNavClick = (sectionId: string) => {
-    scrollToSection(sectionId);
+  const handleNavClick = (sectionId: string, isExternal?: boolean) => {
+    if (isExternal) {
+      // Временная заглушка для будущей страницы блога
+      if (sectionId === "blog") {
+        alert("Страница блога находится в разработке. Скоро здесь будут интересные статьи об ИИ и технологиях!");
+        return;
+      }
+      // В будущем здесь будет навигация на другие страницы
+      // window.location.href = href;
+    } else {
+      scrollToSection(sectionId);
+    }
     setIsMobileMenuOpen(false);
   };
 
@@ -87,7 +105,7 @@ export const Header: React.FC = () => {
             {navigationItems.map((item, index) => (
               <button
                 key={item.id}
-                onClick={() => handleNavClick(item.id)}
+                onClick={() => handleNavClick(item.id, item.isExternal)}
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative",
                   "hover:scale-105 active:scale-95",
@@ -149,7 +167,7 @@ export const Header: React.FC = () => {
               {navigationItems.map((item, index) => (
                 <button
                   key={item.id}
-                  onClick={() => handleNavClick(item.id)}
+                  onClick={() => handleNavClick(item.id, item.isExternal)}
                   className={cn(
                     "block w-full text-left px-4 py-3 rounded-lg text-base font-medium",
                     "transition-all duration-200 active:scale-98",
