@@ -123,7 +123,7 @@ export default function PricingSection() {
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in ${
+              className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 pt-12 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in ${
                 plan.popular ? 'ring-2 ring-purple-500/50 bg-white/10' : ''
               }`}
               style={{ animationDelay: `${index * 0.1}s` }}
@@ -132,8 +132,8 @@ export default function PricingSection() {
             >
               {/* Badge для популярного тарифа */}
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 z-20">
+                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                     🔥 Популярный
                   </span>
                 </div>
