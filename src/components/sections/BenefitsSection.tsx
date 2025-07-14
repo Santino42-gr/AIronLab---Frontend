@@ -167,8 +167,8 @@ export const BenefitsSection: React.FC = () => {
                   <div className="text-sm text-foreground/60">Отраслей</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.4s" }}>
-                  <div className="text-3xl font-bold text-accent mb-2">2M+</div>
-                  <div className="text-sm text-foreground/60">Обработанных запросов</div>
+                  <div className="text-3xl font-bold text-accent mb-2">500+</div>
+                  <div className="text-sm text-foreground/60">Сэкономленных часов</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.5s" }}>
                   <div className="text-3xl font-bold text-accent mb-2">98%</div>
