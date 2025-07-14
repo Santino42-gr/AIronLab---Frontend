@@ -9,7 +9,6 @@ import {
   MessageSquareText, 
   Brain,
   ArrowRight,
-  Play,
   CheckCircle,
   Sparkles,
   Users,
@@ -31,26 +30,26 @@ export const ServicesSection: React.FC = () => {
     [
       {
         icon: <Bot className="h-8 w-8 text-accent" />,
-        title: "Чат-боты и виртуальные ассистенты",
-        description: "Умные боты для автоматизации клиентского сервиса, обработки заявок и круглосуточной поддержки пользователей",
-        features: ["24/7 поддержка", "Интеграция с CRM", "Многоязычность", "Обучение на диалогах"],
-        price: "от 50 000 ₽",
-        timeline: "2-4 недели"
+        title: "Шаблонные ИИ-решения",
+        description: "Готовые решения для быстрого старта: простые автоматизации, боты для Telegram, WhatsApp, Instagram",
+        features: ["Быстрое внедрение", "Готовые шаблоны", "Интеграция мессенджеров", "Базовая аналитика"],
+        price: "от 15 000 ₽",
+        timeline: "1-2 недели"
       },
       {
         icon: <Workflow className="h-8 w-8 text-accent" />,
-        title: "Автоматизация бизнес-процессов",
-        description: "RPA-решения для автоматизации рутинных задач, документооборота и интеграции систем",
-        features: ["Роботизация процессов", "Интеграция API", "Workflow-дизайнер", "Мониторинг процессов"],
-        price: "от 150 000 ₽",
-        timeline: "4-8 недель"
+        title: "Кастомные решения для автоматизации",
+        description: "Уникальные боты с интеграцией в CRM-системы для автоматизации продаж и клиентского сервиса",
+        features: ["Интеграция с CRM", "Персонализация", "Аналитика конверсий", "Многоканальность"],
+        price: "от 50 000 ₽",
+        timeline: "3-6 недель"
       },
       {
         icon: <Eye className="h-8 w-8 text-accent" />,
-        title: "Компьютерное зрение",
-        description: "Распознавание объектов, анализ изображений и видео для контроля качества и безопасности",
-        features: ["Распознавание объектов", "Детекция аномалий", "Анализ видеопотока", "OCR технологии"],
-        price: "от 200 000 ₽",
+        title: "Интеграция MCP серверов",
+        description: "Разработка специализированных MCP-серверов для интеграции кастомных ИИ-решений в ваши системы",
+        features: ["Model Context Protocol", "Кастомная интеграция", "Расширяемость", "Enterprise-уровень"],
+        price: "от 100 000 ₽",
         timeline: "6-12 недель"
       }
     ],
@@ -61,7 +60,7 @@ export const ServicesSection: React.FC = () => {
         title: "Анализ данных и бизнес-аналитика",
         description: "Глубокий анализ больших данных, построение прогнозных моделей и интерактивных дашбордов",
         features: ["Big Data анализ", "Интерактивные дашборды", "Прогнозная аналитика", "A/B тестирование"],
-        price: "от 100 000 ₽",
+        price: "от 30 000 ₽",
         timeline: "3-6 недель"
       },
       {
@@ -69,7 +68,7 @@ export const ServicesSection: React.FC = () => {
         title: "Машинное обучение",
         description: "Создание и внедрение ML-моделей для предсказания трендов, оптимизации и персонализации",
         features: ["Предиктивные модели", "Рекомендательные системы", "Сегментация клиентов", "Оптимизация цен"],
-        price: "от 300 000 ₽",
+        price: "от 60 000 ₽",
         timeline: "8-16 недель"
       },
       {
@@ -85,10 +84,10 @@ export const ServicesSection: React.FC = () => {
     [
       {
         icon: <MessageSquareText className="h-8 w-8 text-accent" />,
-        title: "Обработка естественного языка",
-        description: "Анализ текстов, извлечение инсайтов, автоматическое резюмирование и генерация контента",
-        features: ["Анализ тональности", "Извлечение сущностей", "Генерация текста", "Автоперевод"],
-        price: "от 120 000 ₽",
+        title: "Создание контент заводов",
+        description: "Автоматизированные системы массового производства контента с использованием ИИ для различных каналов",
+        features: ["Массовая генерация", "Мультиформатный контент", "SEO-оптимизация", "Автоматическая публикация"],
+        price: "от 60 000 ₽",
         timeline: "4-8 недель"
       },
       {
@@ -96,7 +95,7 @@ export const ServicesSection: React.FC = () => {
         title: "Персонализация контента",
         description: "ИИ-рекомендации и персонализированный контент для повышения вовлеченности пользователей",
         features: ["Умные рекомендации", "Динамический контент", "Персональные предложения", "Email-автоматизация"],
-        price: "от 90 000 ₽",
+        price: "от 60 000 ₽",
         timeline: "3-6 недель"
       },
       {
@@ -104,7 +103,7 @@ export const ServicesSection: React.FC = () => {
         title: "Голосовые ассистенты",
         description: "Разработка голосовых интерфейсов и речевых ассистентов для мобильных и веб-приложений",
         features: ["Распознавание речи", "Синтез речи", "Голосовые команды", "Мультимодальность"],
-        price: "от 180 000 ₽",
+        price: "от 100 000 ₽",
         timeline: "6-10 недель"
       }
     ]
@@ -205,18 +204,7 @@ export const ServicesSection: React.FC = () => {
                   ))}
                 </div>
 
-                {/* Кнопка действия */}
-                <div className="flex items-center justify-between">
-                  <button className="flex items-center space-x-2 text-accent opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-2">
-                    <Play className="h-4 w-4" />
-                    <span className="text-sm font-medium">Демо</span>
-                  </button>
-                  
-                  <button className="flex items-center space-x-2 text-accent font-medium hover:translate-x-1 transition-transform duration-300">
-                    <span className="text-sm">Подробнее</span>
-                    <ArrowRight className="h-4 w-4" />
-                  </button>
-                </div>
+
               </div>
             </div>
           ))}
@@ -242,17 +230,6 @@ export const ServicesSection: React.FC = () => {
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                className="min-w-[200px] bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
-              >
-                <span className="flex items-center space-x-2">
-                  <Play className="h-5 w-5 text-accent" />
-                  <span>Смотреть демо</span>
-                </span>
               </Button>
             </div>
 
