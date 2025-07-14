@@ -198,7 +198,7 @@ export const HeroSection: React.FC = () => {
         {/* Статистика или дополнительная информация */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "1.8s" }}>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-3xl font-bold text-accent mb-2">100+</div>
+            <div className="text-3xl font-bold text-accent mb-2">30+</div>
             <div className="text-sm text-foreground/60">Успешных проектов</div>
           </div>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
@@ -206,8 +206,8 @@ export const HeroSection: React.FC = () => {
             <div className="text-sm text-foreground/60">Поддержка клиентов</div>
           </div>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-3xl font-bold text-accent mb-2">99.9%</div>
-            <div className="text-sm text-foreground/60">Время работы ИИ</div>
+            <div className="text-3xl font-bold text-accent mb-2">+120%</div>
+            <div className="text-sm text-foreground/60">Рост эффективности бизнеса</div>
           </div>
         </div>
       </div>

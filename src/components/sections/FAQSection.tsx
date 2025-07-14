@@ -80,7 +80,7 @@ export default function FAQSection() {
     : faqData.filter(item => item.category === selectedCategory);
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
+    <section id="faq" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden">
       {/* Декоративные элементы */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/6 w-72 h-72 bg-blue-500/5 rounded-full blur-3xl"></div>
