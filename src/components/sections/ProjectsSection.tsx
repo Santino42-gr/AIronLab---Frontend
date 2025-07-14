@@ -366,17 +366,6 @@ export const ProjectsSection: React.FC = () => {
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
-              
-              <Button
-                variant="outline"
-                size="lg"
-                className="min-w-[200px] bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
-              >
-                <span className="flex items-center space-x-2">
-                  <Play className="h-5 w-5 text-accent" />
-                  <span>Смотреть кейсы</span>
-                </span>
-              </Button>
             </div>
           </div>
         </div>
