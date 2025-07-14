@@ -39,18 +39,18 @@ export const ServicesSection: React.FC = () => {
       },
       {
         icon: <Workflow className="h-8 w-8 text-accent" />,
-        title: "Кастомные боты для сайта",
+        title: "Кастомные решения для автоматизации",
         description: "Уникальные боты с интеграцией в CRM-системы для автоматизации продаж и клиентского сервиса",
         features: ["Интеграция с CRM", "Персонализация", "Аналитика конверсий", "Многоканальность"],
-        price: "от 80 000 ₽",
+        price: "от 50 000 ₽",
         timeline: "3-6 недель"
       },
       {
         icon: <Eye className="h-8 w-8 text-accent" />,
-        title: "Кастомные MCP-серверы",
+        title: "Интеграция MCP серверов",
         description: "Разработка специализированных MCP-серверов для интеграции кастомных ИИ-решений в ваши системы",
         features: ["Model Context Protocol", "Кастомная интеграция", "Расширяемость", "Enterprise-уровень"],
-        price: "от 200 000 ₽",
+        price: "от 100 000 ₽",
         timeline: "6-12 недель"
       }
     ],
