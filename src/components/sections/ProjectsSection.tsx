@@ -78,7 +78,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Время отклика", value: "< 10 сек", improvement: "-99%" },
         { metric: "Автоматизация CRM (Bitrix24)", value: "100%", improvement: "+100%" }
       ],
-      technologies: ["Voiceflow", "React", "OpenAI GPT-4", "JavaScript", "Supabase", "Bitrix24", "WebSocket"],
+      technologies: ["Voiceflow", "OpenAI GPT-4", "JavaScript", "Supabase", "Bitrix24", "WebSocket"],
       timeline: "1.5 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
@@ -95,7 +95,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Качество лидов", value: "85%", improvement: "+35%" },
         { metric: "Экономия времени", value: "40 ч/нед", improvement: "-80%" }
       ],
-      technologies: ["n8n", "Avito API", "JavaScript", "Supabase", "Bitrix24", "Redis"],
+      technologies: ["n8n", "Avito API", "JavaScript", "Supabase", "Bitrix24"],
       timeline: "3 недели",
       image: "/api/placeholder/400/250",
       featured: false,
@@ -112,7 +112,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Автоматизация записи", value: "95%", improvement: "+95%" },
         { metric: "Удовлетворенность", value: "98%", improvement: "+25%" }
       ],
-      technologies: ["Model Context Protocol", "TypeScript", "Railway", "n8n", "React", "Supabase", "OpenAI"],
+      technologies: ["Model Context Protocol", "TypeScript", "Railway", "n8n", "Supabase", "OpenAI"],
       timeline: "4 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
@@ -129,7 +129,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "SEO трафик", value: "85%", improvement: "+85%" },
         { metric: "Экономия бюджета", value: "2.5М ₽", improvement: "+70%" }
       ],
-      technologies: ["n8n", "OpenAI GPT-4", "JavaScript", "Supabase", "React", "Elasticsearch"],
+      technologies: ["n8n", "OpenAI GPT-4", "JavaScript", "Supabase"],
       timeline: "3 месяца",
       image: "/api/placeholder/400/250",
       featured: true,
@@ -146,7 +146,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Сокращение остатков", value: "35%", improvement: "-35%" },
         { metric: "Рост оборота", value: "28%", improvement: "+28%" }
       ],
-      technologies: ["n8n", "Python", "Supabase", "Tableau", "JavaScript", "Scikit-learn"],
+      technologies: ["n8n", "Python", "Supabase", "JavaScript"],
       timeline: "5 месяцев",
       image: "/api/placeholder/400/250",
       featured: false,
@@ -163,7 +163,7 @@ export const ProjectsSection: React.FC = () => {
         { metric: "Время ожидания", value: "< 30 сек", improvement: "-75%" },
         { metric: "Удовлетворенность", value: "89%", improvement: "+15%" }
       ],
-      technologies: ["Voiceflow", "OpenAI Whisper", "JavaScript", "Supabase", "React", "WebRTC"],
+      technologies: ["Voiceflow", "OpenAI Whisper", "JavaScript", "Supabase"],
       timeline: "4 месяца",
       image: "/api/placeholder/400/250",
       featured: false,
@@ -193,6 +193,18 @@ export const ProjectsSection: React.FC = () => {
       </div>
 
       <div className="container-custom relative z-10">
+        {/* Новый блок статистики */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12 animate-slide-up">
+          <div className="text-center p-8 bg-white/70 backdrop-blur-sm rounded-2xl border border-accent/10 shadow-lg">
+            <div className="text-4xl font-bold text-accent mb-2">30+</div>
+            <div className="text-lg text-foreground/70">проектов</div>
+          </div>
+          <div className="text-center p-8 bg-white/70 backdrop-blur-sm rounded-2xl border border-accent/10 shadow-lg">
+            <div className="text-4xl font-bold text-accent mb-2">120%</div>
+            <div className="text-lg text-foreground/70">среднее улучшение</div>
+          </div>
+        </div>
+
         {/* Заголовок секции */}
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-accent/20 rounded-full px-6 py-3 mb-8 shadow-lg">
