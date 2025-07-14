@@ -178,9 +178,9 @@ export const ProjectsSection: React.FC = () => {
 
   // Статистика
   const stats = {
-    totalProjects: projects.length,
+    totalProjects: "30+",
     completedProjects: projects.filter(p => p.status === "completed").length,
-    avgImprovement: "180%",
+    avgImprovement: "120%",
     clientSatisfaction: "96%"
   };
 
@@ -193,18 +193,6 @@ export const ProjectsSection: React.FC = () => {
       </div>
 
       <div className="container-custom relative z-10">
-        {/* Новый блок статистики */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12 animate-slide-up">
-          <div className="text-center p-8 bg-white/70 backdrop-blur-sm rounded-2xl border border-accent/10 shadow-lg">
-            <div className="text-4xl font-bold text-accent mb-2">30+</div>
-            <div className="text-lg text-foreground/70">проектов</div>
-          </div>
-          <div className="text-center p-8 bg-white/70 backdrop-blur-sm rounded-2xl border border-accent/10 shadow-lg">
-            <div className="text-4xl font-bold text-accent mb-2">120%</div>
-            <div className="text-lg text-foreground/70">среднее улучшение</div>
-          </div>
-        </div>
-
         {/* Заголовок секции */}
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-accent/20 rounded-full px-6 py-3 mb-8 shadow-lg">
