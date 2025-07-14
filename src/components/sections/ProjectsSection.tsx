@@ -178,7 +178,7 @@ export const ProjectsSection: React.FC = () => {
 
   // Статистика
   const stats = {
-    totalProjects: "30+",
+    totalProjects: "30",
     completedProjects: projects.filter(p => p.status === "completed").length,
     avgImprovement: "120%",
     clientSatisfaction: "96%"
