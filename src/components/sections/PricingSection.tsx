@@ -119,77 +119,75 @@ export default function PricingSection() {
         </div>
 
         {/* Сетка тарифов */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 pt-8">
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className={`group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 ${plan.popular ? 'pt-16' : ''} transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in ${
-                plan.popular ? 'ring-2 ring-purple-500/50 bg-white/10' : ''
-              }`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onMouseEnter={() => setHoveredPlan(plan.id)}
-              onMouseLeave={() => setHoveredPlan(null)}
+              className={`group relative`}
             >
-              {/* Badge для популярного тарифа */}
-              {plan.popular && (
-                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2 z-20">
-                  <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl">
-                    🔥 Популярный
-                  </span>
-                </div>
-              )}
-
-              {/* Иконка тарифа */}
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${plan.color} p-3 mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <div className="w-full h-full bg-white rounded-xl flex items-center justify-center">
-                  <span className="text-2xl">
-                    {plan.id === 'template' && '📋'}
-                    {plan.id === 'custom' && '🎨'}
-                    {plan.id === 'integration' && '🔗'}
-                    {plan.id === 'unique' && '✨'}
-                  </span>
-                </div>
-              </div>
-
-              {/* Информация о тарифе */}
-              <div className="mb-6">
-                <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
-                <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
-                
-                <div className="flex items-baseline mb-4">
-                  <span className="text-3xl font-bold text-white">{plan.price}</span>
-                  <span className="text-lg text-gray-400 ml-1">{plan.period}</span>
-                </div>
-              </div>
-
-              {/* Список функций */}
-              <ul className="space-y-3 mb-8 flex-grow">
-                {plan.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-start text-gray-300">
-                    <svg className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-
-              {/* Кнопка выбора */}
-              <button
-                onClick={() => handlePlanSelect(plan.id)}
-                className={`w-full py-3 px-4 rounded-xl font-semibold transition-all duration-300 ${
-                  plan.popular
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
-                    : hoveredPlan === plan.id
-                    ? `bg-gradient-to-r ${plan.color} text-white`
-                    : 'bg-white/10 text-white hover:bg-white/20'
+              <div
+                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in ${
+                  plan.popular ? 'ring-2 ring-purple-500/50 bg-white/10' : ''
                 }`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+                onMouseEnter={() => setHoveredPlan(plan.id)}
+                onMouseLeave={() => setHoveredPlan(null)}
               >
-                {plan.buttonText}
-              </button>
-
-              {/* Декоративный элемент при ховере */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${plan.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
+                {/* Badge для популярного тарифа */}
+                {plan.popular && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1.5 rounded-full text-sm font-semibold shadow-xl whitespace-nowrap">
+                      🔥 Популярный
+                    </span>
+                  </div>
+                )}
+                {/* Иконка тарифа */}
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${plan.color} p-3 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="w-full h-full bg-white rounded-xl flex items-center justify-center">
+                    <span className="text-2xl">
+                      {plan.id === 'template' && '📋'}
+                      {plan.id === 'custom' && '🎨'}
+                      {plan.id === 'integration' && '🔗'}
+                      {plan.id === 'unique' && '✨'}
+                    </span>
+                  </div>
+                </div>
+                {/* Информация о тарифе */}
+                <div className="mb-6">
+                  <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
+                  <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
+                  <div className="flex items-baseline mb-4">
+                    <span className="text-3xl font-bold text-white">{plan.price}</span>
+                    <span className="text-lg text-gray-400 ml-1">{plan.period}</span>
+                  </div>
+                </div>
+                {/* Список функций */}
+                <ul className="space-y-3 mb-8 flex-grow">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start text-gray-300">
+                      <svg className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                {/* Кнопка выбора */}
+                <button
+                  onClick={() => handlePlanSelect(plan.id)}
+                  className={`w-full py-3 px-4 rounded-xl font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
+                      : hoveredPlan === plan.id
+                      ? `bg-gradient-to-r ${plan.color} text-white`
+                      : 'bg-white/10 text-white hover:bg-white/20'
+                  }`}
+                >
+                  {plan.buttonText}
+                </button>
+                {/* Декоративный элемент при ховере */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${plan.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
+              </div>
             </div>
           ))}
         </div>
