@@ -25,7 +25,7 @@ const pricingPlans: PricingPlan[] = [
       'Готовые чат-боты',
       'Базовая настройка',
       'Стандартная интеграция',
-      'Техподдержка 30 дней',
+      'Быстрое развертывание',
       'Обучение команды',
       'Документация'
     ],
@@ -41,10 +41,10 @@ const pricingPlans: PricingPlan[] = [
     features: [
       'Персональная разработка',
       'Адаптация под бизнес',
-      'Кастомный дизайн',
-      'Техподдержка 60 дней',
-      'Личный менеджер',
-      'Обновления 6 месяцев'
+      'Уникальный функционал',
+      'Тестирование решения',
+      'Анализ требований',
+      'Обновления 1 месяц'
     ],
     popular: true,
     buttonText: 'Заказать разработку',
@@ -60,8 +60,8 @@ const pricingPlans: PricingPlan[] = [
       'Интеграция с CRM/ERP',
       'API для сторонних систем',
       'Аналитика и отчеты',
-      'Техподдержка 90 дней',
-      'Консультации архитектора',
+      'Мониторинг производительности',
+      'Резервное копирование',
       'Масштабирование решения'
     ],
     buttonText: 'Обсудить интеграцию',
@@ -75,12 +75,11 @@ const pricingPlans: PricingPlan[] = [
     description: 'Эксклюзивные ИИ-решения с нуля',
     features: [
       'Полная разработка с нуля',
-      'Собственные ML-модели',
-      'Бессрочная лицензия',
+      'Продвинутая архитектура',
+      'Высокая производительность',
       'Безлимитная поддержка',
       'Команда экспертов',
-      'Права на исходный код',
-      'Создать кастомное решение'
+      'Права на исходный код'
     ],
     buttonText: 'Создать уникальное решение',
     color: 'from-orange-500 to-red-500'
@@ -124,10 +123,10 @@ export default function PricingSection() {
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className={`group relative`}
+              className={`group relative h-full`}
             >
               <div
-                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in ${
+                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in h-full flex flex-col ${
                   plan.popular ? 'ring-2 ring-purple-500/50 bg-white/10' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -163,16 +162,18 @@ export default function PricingSection() {
                   </div>
                 </div>
                 {/* Список функций */}
-                <ul className="space-y-3 mb-8 flex-grow">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start text-gray-300">
-                      <svg className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex-grow mb-8">
+                  <ul className="space-y-3">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-start text-gray-300">
+                        <svg className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 {/* Кнопка выбора */}
                 <button
                   onClick={() => handlePlanSelect(plan.id)}
