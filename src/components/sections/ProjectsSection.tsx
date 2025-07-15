@@ -185,7 +185,7 @@ export const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-20 relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-muted/30">
+    <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-muted/30">
       {/* Декоративные элементы фона */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -232,26 +232,26 @@ export const ProjectsSection: React.FC = () => {
           </div>
 
           {/* Фильтры */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-4">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setActiveFilter(category.id)}
-                className={`flex items-center space-x-2 px-4 py-2 rounded-full border transition-all duration-300 ${
+                className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-4 py-2 rounded-full border transition-all duration-300 ${
                   activeFilter === category.id
                     ? "bg-accent text-white border-accent shadow-lg scale-105"
                     : "bg-white/60 text-foreground/80 border-accent/20 hover:border-accent/40 hover:bg-white/80"
                 }`}
               >
                 {category.icon}
-                <span className="text-sm font-medium">{category.name}</span>
+                <span className="text-xs sm:text-sm font-medium">{category.name}</span>
               </button>
             ))}
           </div>
         </div>
 
         {/* Сетка проектов */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
@@ -373,8 +373,8 @@ export const ProjectsSection: React.FC = () => {
 
       {/* Модальное окно детального просмотра */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => setSelectedProject(null)}>
+          <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             <div className="p-8">
               <div className="flex items-start justify-between mb-6">
                 <div>

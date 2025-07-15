@@ -45,14 +45,31 @@ export const Header: React.FC = () => {
       }
     };
 
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (isMobileMenuOpen && !target.closest('header')) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("scroll", handleSectionChange);
+    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("keydown", handleEscape);
     
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("scroll", handleSectionChange);
+      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("keydown", handleEscape);
     };
-  }, []);
+  }, [isMobileMenuOpen]);
 
   const handleNavClick = (sectionId: string, isExternal?: boolean) => {
     if (isExternal) {
@@ -87,14 +104,14 @@ export const Header: React.FC = () => {
       {/* Граница снизу как в макете */}
       <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-white/30 to-transparent" />
       
-      <nav className="container-custom py-3">
-        <div className="flex items-center justify-between h-[46.4px]">
+      <nav className="container-custom py-4">
+        <div className="flex items-center justify-between h-12">
           {/* Логотип */}
           <div className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer">
             <img
               src={getImagePath("/images/logo.png")}
               alt="AIronLab Logo"
-              className="h-8 sm:h-10 md:h-11 w-auto object-contain"
+              className="h-6 sm:h-8 md:h-9 w-auto object-contain"
             />
           </div>
 
@@ -162,8 +179,8 @@ export const Header: React.FC = () => {
             ? "max-h-96 opacity-100" 
             : "max-h-0 opacity-0"
         )}>
-          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-white/20 shadow-xl">
-            <div className="container-custom py-6 space-y-4">
+          <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-white/20 shadow-xl z-40">
+            <div className="container-custom py-6 space-y-3">
               {navigationItems.map((item, index) => (
                 <button
                   key={item.id}

@@ -60,7 +60,7 @@ export const BenefitsSection: React.FC = () => {
   ];
 
   return (
-    <section id="benefits" className="min-h-screen py-20 relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-secondary/50">
+    <section id="benefits" className="min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-background via-muted/30 to-secondary/50">
       {/* Декоративные элементы фона */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -88,11 +88,11 @@ export const BenefitsSection: React.FC = () => {
         </div>
 
         {/* Сетка преимуществ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 sm:mb-20">
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-accent/10 hover:border-accent/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up"
+              className="group relative p-6 sm:p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-accent/10 hover:border-accent/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Hover эффект */}

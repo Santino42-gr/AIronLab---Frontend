@@ -112,7 +112,7 @@ export const ServicesSection: React.FC = () => {
   const currentServices = services[activeCategory];
 
   return (
-    <section id="services" className="min-h-screen py-20 relative overflow-hidden bg-gradient-to-br from-secondary/30 via-background to-muted/40">
+    <section id="services" className="min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-secondary/30 via-background to-muted/40">
       {/* Декоративные элементы фона */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -138,31 +138,31 @@ export const ServicesSection: React.FC = () => {
             Полный спектр ИИ-решений для автоматизации, аналитики и оптимизации вашего бизнеса
           </p>
 
-          {/* Переключатель категорий */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
-            {categories.map((category, index) => (
-              <button
-                key={index}
-                onClick={() => setActiveCategory(index)}
-                className={`flex items-center space-x-2 px-6 py-3 rounded-full border transition-all duration-300 ${
-                  activeCategory === index
-                    ? "bg-accent text-white border-accent shadow-lg"
-                    : "bg-white/60 text-foreground/80 border-accent/20 hover:border-accent/40 hover:bg-white/80"
-                }`}
-              >
-                {category.icon}
-                <span className="font-medium">{category.name}</span>
-              </button>
-            ))}
-          </div>
+                  {/* Переключатель категорий */}
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12 px-4">
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveCategory(index)}
+              className={`flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full border transition-all duration-300 text-sm sm:text-base ${
+                activeCategory === index
+                  ? "bg-accent text-white border-accent shadow-lg"
+                  : "bg-white/60 text-foreground/80 border-accent/20 hover:border-accent/40 hover:bg-white/80"
+              }`}
+            >
+              {category.icon}
+              <span className="font-medium">{category.name}</span>
+            </button>
+          ))}
+        </div>
         </div>
 
         {/* Сетка услуг */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {currentServices.map((service, index) => (
             <div
               key={`${activeCategory}-${index}`}
-              className="group relative p-8 bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 animate-slide-up"
+              className="group relative p-6 sm:p-8 bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Градиентная подложка при ховере */}
