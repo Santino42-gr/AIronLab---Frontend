@@ -14,9 +14,6 @@ const nextConfig = {
   },
   // Для рег.ру хостинга basePath НЕ нужен
   // (файлы размещаются в корне домена)
-  env: {
-    NEXT_PUBLIC_DEPLOY_TARGET: 'hosting',
-  },
 };
 
 export default nextConfig; 

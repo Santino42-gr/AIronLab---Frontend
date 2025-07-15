@@ -41,9 +41,12 @@ export function scrollToSection(sectionId: string) {
   }
 }
 
-// Функция для правильного построения путей к изображениям на GitHub Pages
+// Функция для правильного построения путей к изображениям
 export function getImagePath(path: string): string {
-  // В production на GitHub Pages добавляем basePath
-  const basePath = process.env.NODE_ENV === 'production' ? '/AIronLab---Frontend' : '';
+  // Для рег.ру хостинга basePath не нужен (файлы в корне домена)
+  // Для GitHub Pages нужен basePath '/AIronLab---Frontend'
+  // Проверяем переменную окружения NEXT_PUBLIC_DEPLOY_TARGET
+  const deployTarget = process.env.NEXT_PUBLIC_DEPLOY_TARGET;
+  const basePath = deployTarget === 'hosting' ? '' : '/AIronLab---Frontend';
   return `${basePath}${path}`;
 } 

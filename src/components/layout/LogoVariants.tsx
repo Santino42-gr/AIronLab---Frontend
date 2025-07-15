@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { getImagePath } from "@/lib/utils";
 
 interface LogoProps {
   variant?: "full" | "icon-only" | "text-only";
@@ -23,7 +24,7 @@ export const Logo: React.FC<LogoProps> = ({
   const IconComponent = () => (
     <div className="relative">
       <Image
-        src="/images/logo.png"
+        src={getImagePath("/images/logo.png")}
         alt="AIronLab Logo"
         width={currentSize.icon}
         height={currentSize.icon}
