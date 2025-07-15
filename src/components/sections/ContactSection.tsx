@@ -6,7 +6,6 @@ interface ContactForm {
   name: string;
   email: string;
   phone: string;
-  requestType: string;
   message: string;
   agreement: boolean;
 }
@@ -23,7 +22,6 @@ const initialFormState: ContactForm = {
   name: '',
   email: '',
   phone: '',
-  requestType: 'consultation',
   message: '',
   agreement: false
 };
@@ -158,86 +156,51 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
-          {/* Контактная информация */}
+          {/* Социальные сети */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-8">Контактная информация</h3>
+              <h3 className="text-2xl font-bold text-white mb-8">Мы в социальных сетях</h3>
+              <p className="text-gray-300 mb-8">Следите за нашими обновлениями и новостями в области ИИ</p>
               
-              <div className="space-y-6">
-                {/* Телефон */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">Телефон</h4>
-                    <p className="text-gray-300">+7 (495) 123-45-67</p>
-                    <p className="text-gray-400 text-sm">Звонки принимаем 24/7</p>
-                  </div>
-                </div>
-
-                {/* Email */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                      <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">Email</h4>
-                    <p className="text-gray-300">info@aironlab.ru</p>
-                    <p className="text-gray-400 text-sm">Ответим в течение 2 часов</p>
-                  </div>
-                </div>
-
-                {/* Офис */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">Офис</h4>
-                    <p className="text-gray-300">г. Москва, ул. Инновационная, 15</p>
-                    <p className="text-gray-400 text-sm">БЦ "Технопарк", офис 401</p>
-                  </div>
-                </div>
-
-                {/* Время работы */}
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-white">Время работы</h4>
-                    <p className="text-gray-300">Пн-Пт: 9:00 - 19:00</p>
-                    <p className="text-gray-400 text-sm">Сб-Вс: только экстренные случаи</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Социальные сети */}
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Мы в социальных сетях</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center hover:bg-blue-700 transition-colors duration-200">
-                  <span className="text-white font-bold">VK</span>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                {/* ВКонтакте */}
+                <a href="#" className="flex items-center space-x-3 p-4 bg-[#4680C2] hover:bg-[#5A8BC9] rounded-xl transition-colors duration-200">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zM20.133 17.023c-.55.96-1.606 1.394-2.17 1.487-.563.093-2.357.093-2.357.093s-4.213.044-5.09-.482c-.877-.526-1.614-3.087-1.614-3.087s2.37-.07 2.696-.57c.327-.5.327-1.71.327-1.71s-1.27-.044-1.533-.438c-.264-.394-.132-1.71-.132-1.71s.83-.044 1.094-.394c.264-.35.132-1.184.132-1.184s-.83 0-1.138-.35c-.307-.35-.132-1.315-.132-1.315s.525-.044.83-.35c.307-.307.088-.92.088-.92s-.175-.044-.658-.35c-.482-.307-.395-.964-.395-.964s.482-.044 1.051-.35c.57-.307.395-1.315.395-1.315s-.088-.044-.482-.35c-.395-.307-.307-.877-.307-.877s.35-.044.746-.35c.395-.307.22-1.051.22-1.051S13.34 4.692 12 4.692c-1.34 0-1.34 1.491-1.34 1.491s-.175.744.22 1.051c.395.306.746.35.746.35s.088.57-.307.877c-.394.306-.482.35-.482.35s.438 1.008-.395 1.315c-.832.307-1.051.35-1.051.35s.088.657-.395.964c-.482.306-.658.35-.658.35s-.219.613.088.92c.307.306.83.35.83.35s.175.965-.132 1.315c-.307.35-1.138.35-1.138.35s.132.834.132 1.184c0 .35-.264.394-.264.394s1.358.044 1.094.394c-.264.35-1.533.57-1.533.57s.737 2.561 1.614 3.087c.877.526 5.09.482 5.09.482s1.794 0 2.357-.093c.564-.093 1.62-.526 2.17-1.487.55-.96.526-3.35.526-3.35s.024-2.39-.526-3.35z"/>
+                  </svg>
+                  <span className="text-white font-medium">ВКонтакте</span>
                 </a>
-                <a href="#" className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center hover:bg-blue-600 transition-colors duration-200">
-                  <span className="text-white font-bold">TG</span>
+
+                {/* Telegram */}
+                <a href="#" className="flex items-center space-x-3 p-4 bg-[#0088CC] hover:bg-[#0099DD] rounded-xl transition-colors duration-200">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.58 7.44c-.12.534-.432.664-.876.414l-2.42-1.783-1.166 1.123c-.13.13-.238.238-.488.238l.174-2.47 4.492-4.058c.196-.174-.042-.27-.304-.096l-5.544 3.486-2.388-.747c-.52-.162-.532-.52.108-.77l9.312-3.588c.434-.162.81.096.674.77z"/>
+                  </svg>
+                  <span className="text-white font-medium">Telegram</span>
                 </a>
-                <a href="#" className="w-12 h-12 bg-red-600 rounded-xl flex items-center justify-center hover:bg-red-700 transition-colors duration-200">
-                  <span className="text-white font-bold">YT</span>
+
+                {/* VC.ru */}
+                <a href="#" className="flex items-center space-x-3 p-4 bg-[#333333] hover:bg-[#444444] rounded-xl transition-colors duration-200">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.2 7.2h-1.8l-1.8 6L11 7.2H9.6L8 13.2 6.2 7.2H4.4l2.7 9.6h1.8l1.6-6 1.5 6h1.8L16.6 7.2z"/>
+                  </svg>
+                  <span className="text-white font-medium">VC.ru</span>
                 </a>
-                <a href="#" className="w-12 h-12 bg-blue-800 rounded-xl flex items-center justify-center hover:bg-blue-900 transition-colors duration-200">
-                  <span className="text-white font-bold">LI</span>
+
+                {/* Habr */}
+                <a href="#" className="flex items-center space-x-3 p-4 bg-[#65A3BE] hover:bg-[#76B4CF] rounded-xl transition-colors duration-200">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 6h3v4.5h-3V6zm-3 4.5h3V15H7.5v-4.5zm6 0h3V15h-3v-4.5z"/>
+                  </svg>
+                  <span className="text-white font-medium">Habr</span>
+                </a>
+
+                {/* Teletype */}
+                <a href="#" className="flex items-center space-x-3 p-4 bg-[#1E1E1E] hover:bg-[#2E2E2E] rounded-xl transition-colors duration-200">
+                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6 7H6v2h12V7zm-2 4H8v2h8v-2zm-1 4H9v2h6v-2z"/>
+                  </svg>
+                  <span className="text-white font-medium">Teletype</span>
                 </a>
               </div>
             </div>
@@ -296,21 +259,7 @@ export default function ContactSection() {
                 {errors.phone && <p className="text-red-400 text-sm mt-1">{errors.phone}</p>}
               </div>
 
-              {/* Тип запроса */}
-              <div>
-                <label className="block text-white font-medium mb-2">Тип запроса</label>
-                <select
-                  value={form.requestType}
-                  onChange={(e) => handleInputChange('requestType', e.target.value)}
-                  className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white focus:outline-none focus:border-blue-400 transition-colors duration-200"
-                  disabled={isSubmitting}
-                >
-                  <option value="consultation" className="bg-gray-800">Консультация</option>
-                  <option value="project" className="bg-gray-800">Обсуждение проекта</option>
-                  <option value="support" className="bg-gray-800">Техническая поддержка</option>
-                  <option value="partnership" className="bg-gray-800">Партнёрство</option>
-                </select>
-              </div>
+
 
               {/* Сообщение */}
               <div>
