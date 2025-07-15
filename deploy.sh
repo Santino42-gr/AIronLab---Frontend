@@ -23,8 +23,16 @@ fi
 echo "📦 Устанавливаем зависимости..."
 npm ci
 
+echo "🔧 Переключаемся на конфигурацию для рег.ру хостинга..."
+# Временно заменяем конфигурацию
+cp next.config.mjs next.config.backup.mjs
+cp next.config.hosting.mjs next.config.mjs
+
 echo "🔨 Собираем проект..."
 npm run build
+
+echo "🔄 Восстанавливаем оригинальную конфигурацию..."
+mv next.config.backup.mjs next.config.mjs
 
 # Проверяем что папка out создалась
 if [ ! -d "out" ]; then
@@ -33,10 +41,9 @@ if [ ! -d "out" ]; then
 fi
 
 echo "📁 Копируем файлы во временную папку..."
-# Создаем временную папку для файлов деплоя
+# Создаем временную папку для файлов
 TEMP_DIR=$(mktemp -d)
 cp -r out/* "$TEMP_DIR/"
-cp out/.htaccess "$TEMP_DIR/" 2>/dev/null || true
 
 echo "🌿 Создаем/обновляем ветку deploy..."
 
@@ -46,28 +53,20 @@ git branch -D deploy 2>/dev/null || true
 # Создаем новую deploy ветку
 git checkout -b deploy
 
-# ВАЖНО: Проверяем что мы действительно в deploy ветке!
-CURRENT_BRANCH=$(git branch --show-current)
-if [ "$CURRENT_BRANCH" != "deploy" ]; then
-    echo "❌ Ошибка: не удалось переключиться на ветку deploy"
-    rm -rf "$TEMP_DIR"
+# ВАЖНО: проверяем что мы в deploy ветке перед удалением файлов!
+current_branch=$(git branch --show-current)
+if [ "$current_branch" != "deploy" ]; then
+    echo "❌ Ошибка: не удалось переключиться на deploy ветку!"
     exit 1
 fi
 
 echo "🗑️ Очищаем deploy ветку..."
-# Удаляем все файлы кроме .git (только в deploy ветке!)
-find . -maxdepth 1 ! -name '.git' ! -name '.' ! -name '..' -exec rm -rf {} +
+# Удаляем все файлы кроме .git
+find . -maxdepth 1 -not -name '.git' -not -name '.' -exec rm -rf {} +
 
 echo "📂 Копируем статические файлы..."
 # Копируем файлы из временной папки
 cp -r "$TEMP_DIR"/* .
-
-# Создаем .gitignore для deploy ветки
-cat > .gitignore << 'EOF'
-# Минимальный .gitignore для deploy ветки
-.DS_Store
-Thumbs.db
-EOF
 
 # Удаляем временную папку
 rm -rf "$TEMP_DIR"
@@ -77,7 +76,7 @@ git add .
 git commit -m "deploy: $(date '+%Y-%m-%d %H:%M:%S')"
 
 echo "📤 Пушим в GitHub..."
-git push origin deploy --force
+git push -f origin deploy
 
 echo "🔄 Возвращаемся на main ветку..."
 git checkout main
