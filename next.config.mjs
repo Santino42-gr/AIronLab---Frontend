@@ -12,10 +12,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Убираем basePath и assetPrefix для обычного хостинга
-  // Если у вас поддомен, раскомментируйте и настройте:
-  // basePath: '/подпапка',
-  // assetPrefix: '/подпапка/',
+  // Настройки для GitHub Pages (нужны для корректной работы)
+  basePath: '/AIronLab---Frontend',
+  assetPrefix: '/AIronLab---Frontend/',
 };
 
 export default nextConfig; 
