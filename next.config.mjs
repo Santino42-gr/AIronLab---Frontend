@@ -6,15 +6,16 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  // Настройки для GitHub Pages
+  // Настройки для статического экспорта
   output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  // Базовый путь для GitHub Pages (замените на название вашего репо)
-  basePath: process.env.NODE_ENV === 'production' ? '/AIronLab---Frontend' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/AIronLab---Frontend/' : '',
+  // Убираем basePath и assetPrefix для обычного хостинга
+  // Если у вас поддомен, раскомментируйте и настройте:
+  // basePath: '/подпапка',
+  // assetPrefix: '/подпапка/',
 };
 
 export default nextConfig; 
