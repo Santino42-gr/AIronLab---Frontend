@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import { FaTelegramPlane } from 'react-icons/fa';
+import { SiHabr } from 'react-icons/si';
 
 interface ContactForm {
   name: string;
@@ -166,39 +168,35 @@ export default function ContactSection() {
                 {/* ВКонтакте */}
                 <a href="#" className="flex items-center space-x-3 p-4 bg-[#4680C2] hover:bg-[#5A8BC9] rounded-xl transition-colors duration-200">
                   <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zM20.133 17.023c-.55.96-1.606 1.394-2.17 1.487-.563.093-2.357.093-2.357.093s-4.213.044-5.09-.482c-.877-.526-1.614-3.087-1.614-3.087s2.37-.07 2.696-.57c.327-.5.327-1.71.327-1.71s-1.27-.044-1.533-.438c-.264-.394-.132-1.71-.132-1.71s.83-.044 1.094-.394c.264-.35.132-1.184.132-1.184s-.83 0-1.138-.35c-.307-.35-.132-1.315-.132-1.315s.525-.044.83-.35c.307-.307.088-.92.088-.92s-.175-.044-.658-.35c-.482-.307-.395-.964-.395-.964s.482-.044 1.051-.35c.57-.307.395-1.315.395-1.315s-.088-.044-.482-.35c-.395-.307-.307-.877-.307-.877s.35-.044.746-.35c.395-.307.22-1.051.22-1.051S13.34 4.692 12 4.692c-1.34 0-1.34 1.491-1.34 1.491s-.175.744.22 1.051c.395.306.746.35.746.35s.088.57-.307.877c-.394.306-.482.35-.482.35s.438 1.008-.395 1.315c-.832.307-1.051.35-1.051.35s.088.657-.395.964c-.482.306-.658.35-.658.35s-.219.613.088.92c.307.306.83.35.83.35s.175.965-.132 1.315c-.307.35-1.138.35-1.138.35s.132.834.132 1.184c0 .35-.264.394-.264.394s1.358.044 1.094.394c-.264.35-1.533.57-1.533.57s.737 2.561 1.614 3.087c.877.526 5.09.482 5.09.482s1.794 0 2.357-.093c.564-.093 1.62-.526 2.17-1.487.55-.96.526-3.35.526-3.35s.024-2.39-.526-3.35z"/>
+                    <path d="M15.073 2H8.937C3.333 2 2 3.333 2 8.927v6.136C2 20.667 3.333 22 8.927 22h6.136C20.667 22 22 20.667 22 15.073V8.927C22 3.333 20.667 2 15.073 2zm3.073 14.133c-1.107.107-1.68.107-1.68.107s-2.72 0-3.52-.427c-.8-.427-1.04-2.56-1.04-2.56s1.12-.053 1.28-.48c.16-.427.16-1.173.16-1.173s-.64-.053-.8-.32c-.16-.267-.053-1.173-.053-1.173s.427-.053.533-.267c.107-.213.053-.64.053-.64s-.427 0-.587-.213c-.16-.213-.053-.907-.053-.907s.267-.053.427-.213c.16-.16.053-.533.053-.533s-.107-.053-.373-.213c-.267-.16-.213-.64-.213-.64s.267-.053.587-.213c.32-.16.213-.907.213-.907s-.053-.053-.267-.213c-.213-.16-.16-.587-.16-.587s.16-.053.373-.213c.213-.16.107-.587.107-.587S10.507 3.2 9.6 3.2s-.907 1.013-.907 1.013-.107.533.107.587c.213.053.373.053.373.053s.053.373-.16.587c-.213.213-.267.053-.267.053s.213.693-.213.907c-.427.213-.587.213-.587.213s.053.48-.213.64c-.267.16-.373.053-.373.053s-.107.427.053.64c.16.213.427.053.427.053s.107.693-.053.907c-.16.213-.587.053-.587.053s.053.587.053.8c0 .213-.16.267-.16.267s.747.053.587.267c-.16.213-.8.373-.8.373s.373 1.76.907 2.133c.533.373 2.827.32 2.827.32s1.013 0 1.333-.053c.32-.053.907-.373 1.227-1.013.32-.64.32-2.293.32-2.293s0-1.653-.32-2.293z"/>
                   </svg>
                   <span className="text-white font-medium">ВКонтакте</span>
                 </a>
 
                 {/* Telegram */}
                 <a href="#" className="flex items-center space-x-3 p-4 bg-[#0088CC] hover:bg-[#0099DD] rounded-xl transition-colors duration-200">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.568 8.16l-1.58 7.44c-.12.534-.432.664-.876.414l-2.42-1.783-1.166 1.123c-.13.13-.238.238-.488.238l.174-2.47 4.492-4.058c.196-.174-.042-.27-.304-.096l-5.544 3.486-2.388-.747c-.52-.162-.532-.52.108-.77l9.312-3.588c.434-.162.81.096.674.77z"/>
-                  </svg>
+                  <FaTelegramPlane className="w-6 h-6 text-white" />
                   <span className="text-white font-medium">Telegram</span>
                 </a>
 
                 {/* VC.ru */}
-                <a href="#" className="flex items-center space-x-3 p-4 bg-[#333333] hover:bg-[#444444] rounded-xl transition-colors duration-200">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.2 7.2h-1.8l-1.8 6L11 7.2H9.6L8 13.2 6.2 7.2H4.4l2.7 9.6h1.8l1.6-6 1.5 6h1.8L16.6 7.2z"/>
-                  </svg>
+                <a href="#" className="flex items-center space-x-3 p-4 bg-[#FF6600] hover:bg-[#FF7711] rounded-xl transition-colors duration-200">
+                  <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center">
+                    <span className="text-[#FF6600] text-xs font-bold">VC</span>
+                  </div>
                   <span className="text-white font-medium">VC.ru</span>
                 </a>
 
                 {/* Habr */}
                 <a href="#" className="flex items-center space-x-3 p-4 bg-[#65A3BE] hover:bg-[#76B4CF] rounded-xl transition-colors duration-200">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm-1.5 6h3v4.5h-3V6zm-3 4.5h3V15H7.5v-4.5zm6 0h3V15h-3v-4.5z"/>
-                  </svg>
+                  <SiHabr className="w-6 h-6 text-white" />
                   <span className="text-white font-medium">Habr</span>
                 </a>
 
                 {/* Teletype */}
                 <a href="#" className="flex items-center space-x-3 p-4 bg-[#1E1E1E] hover:bg-[#2E2E2E] rounded-xl transition-colors duration-200">
                   <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6 7H6v2h12V7zm-2 4H8v2h8v-2zm-1 4H9v2h6v-2z"/>
+                    <path d="M2 6h20v2H2zm2 4h16v2H4zm1 4h14v2H5z"/>
                   </svg>
                   <span className="text-white font-medium">Teletype</span>
                 </a>
