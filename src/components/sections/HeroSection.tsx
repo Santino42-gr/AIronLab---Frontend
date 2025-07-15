@@ -141,13 +141,13 @@ export const HeroSection: React.FC = () => {
 
         {/* Заголовок с иконкой и интерактивными элементами */}
         <div className="relative">
-          <div className="flex items-center justify-center gap-4 mb-6 animate-slide-up hover:scale-105 transition-transform duration-500" style={{ animationDelay: "0.6s" }}>
+          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 animate-slide-up hover:scale-105 transition-transform duration-500" style={{ animationDelay: "0.6s" }}>
             <img
               src={getImagePath("/images/icon.png")}
               alt="AIronLab Icon"
-              className="h-16 md:h-20 object-contain hover:rotate-12 transition-transform duration-300"
+              className="h-12 sm:h-16 md:h-20 object-contain hover:rotate-12 transition-transform duration-300"
             />
-            <h1 className="text-5xl md:text-7xl font-bold text-black">
+            <h1 className="text-responsive-h1 font-bold text-black">
               AIronLab
             </h1>
           </div>
@@ -155,28 +155,28 @@ export const HeroSection: React.FC = () => {
 
         {/* Подзаголовок */}
         <div className="relative">
-          <p className="text-xl md:text-2xl text-foreground/70 mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up hover:text-foreground/90 transition-colors duration-300" style={{ animationDelay: "0.9s" }}>
+          <p className="text-responsive-h3 text-foreground/70 mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed animate-slide-up hover:text-foreground/90 transition-colors duration-300 px-4" style={{ animationDelay: "0.9s" }}>
             Уникальные ИИ-решения для вашего бизнеса
           </p>
         </div>
 
         {/* Дополнительное описание */}
         <div className="relative">
-          <p className="text-lg text-foreground/60 mb-12 max-w-2xl mx-auto animate-fade-in hover:text-foreground/80 transition-colors duration-300" style={{ animationDelay: "1.2s" }}>
+          <p className="text-sm sm:text-base md:text-lg text-foreground/60 mb-8 sm:mb-12 max-w-2xl mx-auto animate-fade-in hover:text-foreground/80 transition-colors duration-300 px-4" style={{ animationDelay: "1.2s" }}>
             Автоматизируем рост выручки, оптимизируем ресурсы компании и создаём устойчивые конкурентные преимущества
           </p>
         </div>
 
         {/* CTA кнопки */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" style={{ animationDelay: "1.5s" }}>
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-slide-up px-4" style={{ animationDelay: "1.5s" }}>
           <Button
             onClick={handleCTAClick}
             size="lg"
-            className="relative overflow-hidden group min-w-[200px] shadow-lg hover:shadow-xl"
+            className="relative overflow-hidden group w-full sm:w-auto min-w-[200px] shadow-lg hover:shadow-xl"
           >
-            <span className="relative z-10 flex items-center space-x-2">
+            <span className="relative z-10 flex items-center justify-center space-x-2">
               <span>Оставить заявку</span>
-              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-4 sm:h-5 w-4 sm:w-5 transition-transform group-hover:translate-x-1" />
             </span>
             {/* Анимированный фон */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -186,28 +186,28 @@ export const HeroSection: React.FC = () => {
             variant="outline"
             onClick={handleServicesClick}
             size="lg"
-            className="relative overflow-hidden group min-w-[200px] bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
+            className="relative overflow-hidden group w-full sm:w-auto min-w-[200px] bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
           >
-            <span className="relative z-10 flex items-center space-x-2">
-              <Sparkles className="h-5 w-5 text-accent" />
+            <span className="relative z-10 flex items-center justify-center space-x-2">
+              <Sparkles className="h-4 sm:h-5 w-4 sm:w-5 text-accent" />
               <span>Наши услуги</span>
             </span>
           </Button>
         </div>
 
         {/* Статистика или дополнительная информация */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 animate-fade-in" style={{ animationDelay: "1.8s" }}>
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 animate-fade-in px-4" style={{ animationDelay: "1.8s" }}>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-3xl font-bold text-accent mb-2">30+</div>
-            <div className="text-sm text-foreground/60">Успешных проектов</div>
+            <div className="text-2xl sm:text-3xl font-bold text-accent mb-1 sm:mb-2">30+</div>
+            <div className="text-xs sm:text-sm text-foreground/60">Успешных проектов</div>
           </div>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-3xl font-bold text-accent mb-2">24/7</div>
-            <div className="text-sm text-foreground/60">Поддержка клиентов</div>
+            <div className="text-2xl sm:text-3xl font-bold text-accent mb-1 sm:mb-2">24/7</div>
+            <div className="text-xs sm:text-sm text-foreground/60">Поддержка клиентов</div>
           </div>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-3xl font-bold text-accent mb-2">+120%</div>
-            <div className="text-sm text-foreground/60">Рост эффективности бизнеса</div>
+            <div className="text-2xl sm:text-3xl font-bold text-accent mb-1 sm:mb-2">+120%</div>
+            <div className="text-xs sm:text-sm text-foreground/60">Рост эффективности бизнеса</div>
           </div>
         </div>
       </div>

@@ -106,27 +106,27 @@ export default function PricingSection() {
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Заголовок секции */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-responsive-h2 font-bold text-white mb-4 sm:mb-6">
             Выберите подходящий
             <span className="block bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               тарифный план
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto px-4">
             От готовых шаблонов до эксклюзивных решений — у нас есть идеальный вариант для вашего бизнеса
           </p>
         </div>
 
         {/* Сетка тарифов */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 pt-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16 pt-6 sm:pt-8">
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
               className={`group relative h-full`}
             >
               <div
-                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in h-full flex flex-col ${
+                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in h-full flex flex-col ${
                   plan.popular ? 'ring-2 ring-purple-500/50 bg-white/10' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}

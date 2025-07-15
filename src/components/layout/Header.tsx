@@ -94,9 +94,7 @@ export const Header: React.FC = () => {
             <img
               src={getImagePath("/images/logo.png")}
               alt="AIronLab Logo"
-              height={44}
-              width={140}
-              className="object-contain"
+              className="h-8 sm:h-10 md:h-11 w-auto object-contain"
             />
           </div>
 
@@ -128,11 +126,12 @@ export const Header: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-3">
             <Button
               onClick={handleContactClick}
-              className="relative overflow-hidden group"
+              className="relative overflow-hidden group px-4 py-2"
+              size="sm"
             >
               <span className="relative z-10 flex items-center space-x-2">
                 <span>Оставить заявку</span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-3 w-3 transition-transform group-hover:translate-x-1" />
               </span>
             </Button>
           </div>
@@ -141,15 +140,16 @@ export const Header: React.FC = () => {
           <button
             className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors active:scale-90"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Меню"
           >
             <div className={cn(
               "transition-all duration-200",
               isMobileMenuOpen ? "rotate-180" : "rotate-0"
             )}>
               {isMobileMenuOpen ? (
-                <X className="h-6 w-6 animate-spin-in" />
+                <X className="h-5 w-5 sm:h-6 sm:w-6 animate-spin-in" />
               ) : (
-                <Menu className="h-6 w-6 animate-spin-in" />
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6 animate-spin-in" />
               )}
             </div>
           </button>
