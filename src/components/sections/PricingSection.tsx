@@ -88,12 +88,9 @@ const pricingPlans: PricingPlan[] = [
 ];
 
 export default function PricingSection() {
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const [hoveredPlan, setHoveredPlan] = useState<string | null>(null);
 
   const handlePlanSelect = (planId: string) => {
-    setSelectedPlan(planId);
-    // Переход к форме обратной связи
     scrollToSection("contact");
   };
 
