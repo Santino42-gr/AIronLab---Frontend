@@ -186,7 +186,7 @@ export default function PricingSection() {
                   {plan.buttonText}
                 </button>
                 {/* Декоративный элемент при ховере */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${plan.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${plan.color} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300 pointer-events-none`}></div>
               </div>
             </div>
           ))}
