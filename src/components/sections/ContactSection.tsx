@@ -260,7 +260,7 @@ export default function ContactSection() {
                       </div>
                       <div>
                         <p className="text-white font-medium text-sm">VC.ru</p>
-                        <p className="text-orange-200 text-xs">@id709930</p>
+                        <p className="text-orange-200 text-xs">@AIronLab</p>
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
