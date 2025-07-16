@@ -55,11 +55,30 @@ export const metadata: Metadata = {
   keywords: "ИИ, искусственный интеллект, AI, машинное обучение, автоматизация, бизнес решения",
   authors: [{ name: "AIronLab" }],
   robots: "index, follow",
+  icons: {
+    icon: [
+      { url: '/images/icon.png', sizes: '268x279', type: 'image/png' },
+      { url: '/images/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/icon.png', sizes: '16x16', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/images/icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/images/icon.png',
+  },
   openGraph: {
     title: "AIronLab - Уникальные ИИ-решения для вашего бизнеса",
     description: "Инновационные решения на основе искусственного интеллекта для развития вашего бизнеса",
     type: "website",
     locale: "ru_RU",
+    images: [
+      {
+        url: '/images/icon.png',
+        width: 268,
+        height: 279,
+        alt: 'AIronLab Logo',
+      },
+    ],
   },
 };
 
