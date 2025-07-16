@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { scrollToSection } from '@/lib/utils';
 
 interface PricingPlan {
   id: string;
@@ -92,8 +93,8 @@ export default function PricingSection() {
 
   const handlePlanSelect = (planId: string) => {
     setSelectedPlan(planId);
-    // Здесь можно добавить логику для перехода к форме заказа
-    console.log(`Выбран тариф: ${planId}`);
+    // Переход к форме обратной связи
+    scrollToSection("contact");
   };
 
   return (
@@ -221,7 +222,10 @@ export default function PricingSection() {
 
           <p className="text-gray-400 text-lg">
             Не уверены какой тариф выбрать?{' '}
-            <button className="text-blue-400 hover:text-blue-300 underline transition-colors duration-200">
+            <button 
+              onClick={() => scrollToSection("contact")}
+              className="text-blue-400 hover:text-blue-300 underline transition-colors duration-200"
+            >
               Получите персональную консультацию
             </button>
           </p>

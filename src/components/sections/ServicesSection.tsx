@@ -15,6 +15,7 @@ import {
   Cog
 } from "lucide-react";
 import { Button } from "@/components/ui/Button";
+import { scrollToSection } from "@/lib/utils";
 
 export const ServicesSection: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState(0);
@@ -222,6 +223,7 @@ export const ServicesSection: React.FC = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
+                onClick={() => scrollToSection("contact")}
                 size="lg"
                 className="relative overflow-hidden group min-w-[200px] shadow-lg hover:shadow-xl"
               >
