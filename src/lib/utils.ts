@@ -41,18 +41,7 @@ export function scrollToSection(sectionId: string) {
   }
 }
 
-// Функция для правильного построения путей к изображениям
+// Функция для построения путей к изображениям (Vercel)
 export function getImagePath(path: string): string {
-  // Определяем платформу деплоя
-  const deployTarget = process.env.NEXT_PUBLIC_DEPLOY_TARGET;
-  const isVercel = process.env.NEXT_PUBLIC_VERCEL === '1';
-  
-  // Для GitHub Pages нужен basePath '/AIronLab---Frontend'
-  // Для reg.ru хостинга и Vercel basePath не нужен
-  if (deployTarget === 'github') {
-    return `/AIronLab---Frontend${path}`;
-  }
-  
-  // Для hosting (reg.ru) и Vercel используем путь без basePath
   return path;
 } 
