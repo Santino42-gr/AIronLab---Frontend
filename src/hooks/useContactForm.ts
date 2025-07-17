@@ -1,13 +1,21 @@
 import { useState } from 'react'
-import { ContactFormData } from '../../backend/api/contact'
 
-interface UseContactFormState {
+// Типы для контактной формы (локальные, без бэкенда)
+export interface ContactFormData {
+  name: string
+  email: string
+  phone?: string
+  message: string
+  agreement: boolean
+}
+
+export interface UseContactFormState {
   isSubmitting: boolean
   isSuccess: boolean
   error: string | null
 }
 
-interface UseContactFormReturn extends UseContactFormState {
+export interface UseContactFormReturn extends UseContactFormState {
   submitForm: (data: ContactFormData) => Promise<void>
   resetForm: () => void
 }
@@ -27,19 +35,17 @@ export function useContactForm(): UseContactFormReturn {
     })
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
+      // Симуляция отправки (заглушка)
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      // Логируем данные в консоль для демонстрации
+      console.log('Данные формы (демо):', {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: data.message,
+        timestamp: new Date().toISOString()
       })
-
-      const result = await response.json()
-
-      if (!response.ok) {
-        throw new Error(result.error || 'Ошибка отправки заявки')
-      }
 
       setState({
         isSubmitting: false,
@@ -56,7 +62,7 @@ export function useContactForm(): UseContactFormReturn {
         })
       }
 
-      // Можно добавить отправку в Яндекс.Метрику
+      // Яндекс.Метрика
       if (typeof window !== 'undefined' && (window as any).ym) {
         (window as any).ym(12345678, 'reachGoal', 'contact_form_submit')
       }

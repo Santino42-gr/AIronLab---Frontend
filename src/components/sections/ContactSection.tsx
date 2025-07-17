@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { FaTelegramPlane } from 'react-icons/fa';
 import { SiHabr } from 'react-icons/si';
-import { useContactForm } from '@/hooks/useContactForm';
+import { useContactForm, ContactFormData } from '@/hooks/useContactForm';
 
 interface ContactForm {
   name: string;
@@ -92,13 +92,15 @@ export default function ContactSection() {
     }
 
     try {
-      await submitForm({
+      const submissionData: ContactFormData = {
         name: formData.name.trim(),
         email: formData.email.trim(),
         phone: formData.phone.trim() || undefined,
         message: formData.message.trim(),
         agreement: formData.agreement,
-      });
+      };
+
+      await submitForm(submissionData);
 
       // Если успешно - очищаем форму
       if (!error) {
