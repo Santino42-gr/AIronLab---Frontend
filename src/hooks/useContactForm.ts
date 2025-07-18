@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-// Типы для контактной формы (локальные, без бэкенда)
+// Типы для контактной формы
 export interface ContactFormData {
   name: string
   email: string
@@ -20,6 +20,23 @@ export interface UseContactFormReturn extends UseContactFormState {
   resetForm: () => void
 }
 
+// Утилита для получения UTM параметров
+const getUTMParams = () => {
+  if (typeof window === 'undefined') {
+    return {}
+  }
+
+  const urlParams = new URLSearchParams(window.location.search)
+  
+  return {
+    utm_source: urlParams.get('utm_source'),
+    utm_medium: urlParams.get('utm_medium'),
+    utm_campaign: urlParams.get('utm_campaign'),
+    utm_content: urlParams.get('utm_content'),
+    utm_term: urlParams.get('utm_term'),
+  }
+}
+
 export function useContactForm(): UseContactFormReturn {
   const [state, setState] = useState<UseContactFormState>({
     isSubmitting: false,
@@ -35,17 +52,27 @@ export function useContactForm(): UseContactFormReturn {
     })
 
     try {
-      // Симуляция отправки (заглушка)
-      await new Promise(resolve => setTimeout(resolve, 1500))
-      
-      // Логируем данные в консоль для демонстрации
-      console.log('Данные формы (демо):', {
-        name: data.name,
-        email: data.email,
-        phone: data.phone,
-        message: data.message,
-        timestamp: new Date().toISOString()
+      // Подготавливаем данные для отправки
+      const submitData = {
+        ...data,
+        ...getUTMParams(), // Добавляем UTM параметры
+        referrer: typeof window !== 'undefined' ? document.referrer : undefined,
+      }
+
+      // Отправляем запрос на бэкенд
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/api/email/contact`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submitData),
       })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.message || result.error || 'Ошибка при отправке заявки')
+      }
 
       setState({
         isSubmitting: false,
@@ -67,13 +94,32 @@ export function useContactForm(): UseContactFormReturn {
         (window as any).ym(12345678, 'reachGoal', 'contact_form_submit')
       }
 
+      console.log('✅ Заявка успешно отправлена:', result.messageId)
+
     } catch (error) {
-      console.error('Contact form error:', error)
+      console.error('❌ Ошибка отправки формы:', error)
+      
+      let errorMessage = 'Произошла ошибка при отправке заявки'
+      
+      if (error instanceof Error) {
+        // Обрабатываем специфичные ошибки
+        if (error.message.includes('RATE_LIMIT_EXCEEDED')) {
+          errorMessage = 'Слишком много запросов. Попробуйте позже.'
+        } else if (error.message.includes('VALIDATION_ERROR')) {
+          errorMessage = 'Ошибка валидации данных. Проверьте заполненные поля.'
+        } else if (error.message.includes('EMAIL_SERVICE_ERROR')) {
+          errorMessage = 'Временные проблемы с почтовым сервисом. Попробуйте позже.'
+        } else if (error.message.includes('Failed to fetch')) {
+          errorMessage = 'Ошибка соединения. Проверьте интернет-подключение.'
+        } else {
+          errorMessage = error.message
+        }
+      }
       
       setState({
         isSubmitting: false,
         isSuccess: false,
-        error: error instanceof Error ? error.message : 'Произошла ошибка при отправке заявки',
+        error: errorMessage,
       })
     }
   }
@@ -93,19 +139,7 @@ export function useContactForm(): UseContactFormReturn {
   }
 }
 
-// Хук для получения UTM параметров из URL
+// Хук для получения UTM параметров из URL (экспортируем отдельно для совместимости)
 export function useUTMParams() {
-  if (typeof window === 'undefined') {
-    return {}
-  }
-
-  const urlParams = new URLSearchParams(window.location.search)
-  
-  return {
-    utm_source: urlParams.get('utm_source'),
-    utm_medium: urlParams.get('utm_medium'),
-    utm_campaign: urlParams.get('utm_campaign'),
-    utm_content: urlParams.get('utm_content'),
-    utm_term: urlParams.get('utm_term'),
-  }
+  return getUTMParams()
 } 
