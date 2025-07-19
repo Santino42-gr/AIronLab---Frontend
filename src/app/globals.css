@@ -88,6 +88,23 @@
     @apply text-sm md:text-base;
   }
 
+  /* Мобильные улучшения */
+  .mobile-friendly-button {
+    @apply min-h-[48px] min-w-[48px] text-base md:text-lg px-6 py-3 md:px-8 md:py-4;
+  }
+
+  .mobile-friendly-touch {
+    @apply min-h-[44px] p-3 md:p-4;
+  }
+
+  .mobile-safe-spacing {
+    @apply px-4 py-8 md:px-8 md:py-12;
+  }
+
+  .mobile-text-readable {
+    @apply leading-relaxed text-base md:text-lg;
+  }
+
   .spacing-responsive {
     @apply py-12 sm:py-16 md:py-20;
   }

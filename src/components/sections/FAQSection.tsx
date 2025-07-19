@@ -217,7 +217,7 @@ export default function FAQSection() {
             <div className="flex justify-center">
               <button 
                 onClick={() => scrollToSection("contact")}
-                className="bg-white/10 text-white border border-white/20 px-8 py-3 rounded-xl font-semibold hover:bg-white/20 transition-colors duration-200 flex items-center justify-center"
+                className="mobile-friendly-button bg-white/10 text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-colors duration-200 flex items-center justify-center"
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

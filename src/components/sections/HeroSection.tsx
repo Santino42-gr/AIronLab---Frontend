@@ -26,105 +26,105 @@ export const HeroSection: React.FC = () => {
       {/* ИИ интерактивные элементы */}
       <div className="absolute inset-0 pointer-events-none">
         {/* ИИ иконки в безопасных позициях - не наплывают на текст */}
-        <div className="absolute top-[15%] left-[8%] animate-float group-hover:scale-110 transition-transform duration-300">
-          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[15%] left-[8%] animate-float transition-transform duration-300">
+          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Brain className="h-7 w-7 text-accent" />
           </div>
         </div>
         
-        <div className="absolute top-[22%] right-[12%] animate-float-delayed group-hover:scale-110 transition-transform duration-300">
-          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[22%] right-[12%] animate-float-delayed transition-transform duration-300">
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Cpu className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[68%] left-[5%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.2s" }}>
-          <div className="p-3.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[68%] left-[5%] animate-float transition-transform duration-300" style={{ animationDelay: "1.2s" }}>
+          <div className="p-3.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Bot className="h-8 w-8 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[75%] right-[7%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.8s" }}>
-          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[75%] right-[7%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "0.8s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Network className="h-5 w-5 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[35%] left-[88%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.8s" }}>
-          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[35%] left-[88%] animate-float transition-transform duration-300" style={{ animationDelay: "1.8s" }}>
+          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Eye className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[55%] left-[15%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.3s" }}>
-          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[55%] left-[15%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.3s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Database className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[8%] left-[65%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.5s" }}>
-          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[8%] left-[65%] animate-float transition-transform duration-300" style={{ animationDelay: "0.5s" }}>
+          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Activity className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[45%] left-[2%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.5s" }}>
-          <div className="p-3.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[45%] left-[2%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "1.5s" }}>
+          <div className="p-3.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Layers className="h-7 w-7 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[58%] right-[25%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.1s" }}>
-          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[58%] right-[25%] animate-float transition-transform duration-300" style={{ animationDelay: "2.1s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Lightbulb className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[5%] left-[25%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.7s" }}>
-          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[5%] left-[25%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "1.7s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <CircuitBoard className="h-5 w-5 text-primary" />
           </div>
         </div>
 
         {/* Дополнительные уникальные ИИ-элементы в безопасных зонах */}
-        <div className="absolute top-[85%] left-[25%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.9s" }}>
-          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[85%] left-[25%] animate-float transition-transform duration-300" style={{ animationDelay: "1.9s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Settings className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[18%] right-[25%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.7s" }}>
-          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[18%] right-[25%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.7s" }}>
+          <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Workflow className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[42%] right-[5%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
-          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[42%] right-[5%] animate-float transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Radar className="h-5 w-5 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[88%] right-[15%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.4s" }}>
-          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[88%] right-[15%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.4s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Search className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[82%] left-[82%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "1.3s" }}>
-          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[82%] left-[82%] animate-float transition-transform duration-300" style={{ animationDelay: "1.3s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Cloud className="h-5 w-5 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[12%] right-[75%] animate-float-delayed group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "3.1s" }}>
-          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20 hover:bg-primary/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[12%] right-[75%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "3.1s" }}>
+          <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Monitor className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[92%] left-[65%] animate-float group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: "2.8s" }}>
-          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20 hover:bg-accent/20 hover:scale-125 transition-all duration-300 cursor-pointer pointer-events-auto">
+        <div className="absolute top-[92%] left-[65%] animate-float transition-transform duration-300" style={{ animationDelay: "2.8s" }}>
+          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Atom className="h-5 w-5 text-accent" />
           </div>
         </div>
@@ -168,15 +168,15 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* CTA кнопки */}
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center animate-slide-up px-4" style={{ animationDelay: "1.5s" }}>
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center animate-slide-up px-4" style={{ animationDelay: "1.5s" }}>
           <Button
             onClick={handleCTAClick}
             size="lg"
-            className="relative overflow-hidden group w-full sm:w-auto min-w-[200px] shadow-lg hover:shadow-xl"
+            className="mobile-friendly-button relative overflow-hidden group w-full sm:w-auto shadow-lg hover:shadow-xl"
           >
             <span className="relative z-10 flex items-center justify-center space-x-2">
               <span>Оставить заявку</span>
-              <ArrowRight className="h-4 sm:h-5 w-4 sm:w-5 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </span>
             {/* Анимированный фон */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -186,10 +186,10 @@ export const HeroSection: React.FC = () => {
             variant="outline"
             onClick={handleServicesClick}
             size="lg"
-            className="relative overflow-hidden group w-full sm:w-auto min-w-[200px] bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
+            className="mobile-friendly-button relative overflow-hidden group w-full sm:w-auto bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
           >
             <span className="relative z-10 flex items-center justify-center space-x-2">
-              <Sparkles className="h-4 sm:h-5 w-4 sm:w-5 text-accent" />
+              <Sparkles className="h-5 w-5 text-accent" />
               <span>Наши услуги</span>
             </span>
           </Button>
@@ -197,15 +197,15 @@ export const HeroSection: React.FC = () => {
 
         {/* Статистика или дополнительная информация */}
         <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 animate-fade-in px-4" style={{ animationDelay: "1.8s" }}>
-          <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <div className="text-center">
             <div className="text-responsive-stats text-accent mb-1 sm:mb-2">30+</div>
             <div className="text-responsive-small text-foreground/60">Успешных проектов</div>
           </div>
-          <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <div className="text-center">
             <div className="text-responsive-stats text-accent mb-1 sm:mb-2">24/7</div>
             <div className="text-responsive-small text-foreground/60">Поддержка клиентов</div>
           </div>
-          <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <div className="text-center">
             <div className="text-responsive-stats text-accent mb-1 sm:mb-2">+120%</div>
             <div className="text-responsive-small text-foreground/60">Рост эффективности бизнеса</div>
           </div>

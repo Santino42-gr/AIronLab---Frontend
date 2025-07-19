@@ -175,7 +175,7 @@ export default function PricingSection() {
                 {/* Кнопка выбора */}
                 <button
                   onClick={() => handlePlanSelect(plan.id)}
-                  className={`w-full py-3 px-4 rounded-xl font-semibold transition-all duration-300 ${
+                  className={`mobile-friendly-button w-full rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                       : hoveredPlan === plan.id
@@ -217,15 +217,17 @@ export default function PricingSection() {
             </div>
           </div>
 
-          <p className="text-gray-400 text-lg">
-            Не уверены какой тариф выбрать?{' '}
+          <div className="text-center">
+            <p className="text-gray-400 text-lg mb-4">
+              Не уверены какой тариф выбрать?
+            </p>
             <button 
               onClick={() => scrollToSection("contact")}
-              className="text-blue-400 hover:text-blue-300 underline transition-colors duration-200"
+              className="mobile-friendly-touch bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors duration-200 font-medium"
             >
               Получите персональную консультацию
             </button>
-          </p>
+          </div>
         </div>
       </div>
     </section>

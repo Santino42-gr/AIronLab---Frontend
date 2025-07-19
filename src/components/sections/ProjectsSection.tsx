@@ -360,7 +360,7 @@ export const ProjectsSection: React.FC = () => {
               <Button
                 onClick={() => scrollToSection("contact")}
                 size="lg"
-                className="relative overflow-hidden group min-w-[200px] shadow-lg hover:shadow-xl"
+                className="mobile-friendly-button relative overflow-hidden group shadow-lg hover:shadow-xl"
               >
                 <span className="relative z-10 flex items-center space-x-2">
                   <span>Обсудить проект</span>
