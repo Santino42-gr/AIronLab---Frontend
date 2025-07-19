@@ -120,7 +120,7 @@ export default function ContactSection() {
   // Если форма успешно отправлена
   if (isSuccess) {
     return (
-      <section id="contact" className="py-32 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <section id="contact" className="py-32 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 non-interactive" data-scroll-container="true">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20">
@@ -166,7 +166,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-32 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <section id="contact" className="py-32 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 non-interactive" data-scroll-container="true">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">

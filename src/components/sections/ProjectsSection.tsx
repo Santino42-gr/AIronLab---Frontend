@@ -186,7 +186,7 @@ export const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-muted/30">
+    <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-muted/30 non-interactive" data-scroll-container="true">
       {/* Декоративные элементы фона */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow"></div>

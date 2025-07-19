@@ -113,7 +113,7 @@ export const ServicesSection: React.FC = () => {
   const currentServices = services[activeCategory];
 
   return (
-    <section id="services" className="min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-secondary/30 via-background to-muted/40">
+    <section id="services" className="min-h-screen py-12 sm:py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-secondary/30 via-background to-muted/40 non-interactive" data-scroll-container="true">
       {/* Декоративные элементы фона */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse-slow"></div>
