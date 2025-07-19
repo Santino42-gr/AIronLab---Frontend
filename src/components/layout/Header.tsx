@@ -121,6 +121,7 @@ export const Header: React.FC = () => {
               <button
                 key={item.id}
                 onClick={() => handleNavClick(item.id, item.isExternal)}
+                data-clickable="true"
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative",
                   "hover:scale-105 active:scale-95",
@@ -145,6 +146,7 @@ export const Header: React.FC = () => {
               onClick={handleContactClick}
               className="relative overflow-hidden group px-4 py-2"
               size="sm"
+              data-clickable="true"
             >
               <span className="relative z-10 flex items-center space-x-2">
                 <span>Оставить заявку</span>
@@ -158,6 +160,7 @@ export const Header: React.FC = () => {
             className="lg:hidden p-2 rounded-lg hover:bg-white/10 transition-colors active:scale-90"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Меню"
+            data-clickable="true"
           >
             <div className={cn(
               "transition-all duration-200",
@@ -185,6 +188,7 @@ export const Header: React.FC = () => {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id, item.isExternal)}
+                  data-clickable="true"
                   className={cn(
                     "block w-full text-left px-4 py-3 rounded-lg text-base font-medium",
                     "transition-all duration-200 active:scale-98",
@@ -204,6 +208,7 @@ export const Header: React.FC = () => {
                     onClick={handleContactClick}
                     className="w-full justify-center group"
                     size="lg"
+                    data-clickable="true"
                   >
                     <span className="flex items-center space-x-2">
                       <span>Оставить заявку</span>

@@ -238,6 +238,7 @@ export const ProjectsSection: React.FC = () => {
               <button
                 key={category.id}
                 onClick={() => setActiveFilter(category.id)}
+                data-clickable="true"
                 className={`flex items-center space-x-1 sm:space-x-2 px-3 sm:px-4 py-2 rounded-full border transition-all duration-300 ${
                   activeFilter === category.id
                     ? "bg-accent text-white border-accent shadow-lg scale-105"
@@ -256,7 +257,7 @@ export const ProjectsSection: React.FC = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="relative bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 animate-slide-up overflow-hidden"
+              className="relative bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 animate-slide-up overflow-hidden non-interactive"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Featured badge */}
@@ -334,6 +335,7 @@ export const ProjectsSection: React.FC = () => {
                 <div className="flex items-center justify-between">
                   <button 
                     onClick={() => setSelectedProject(project)}
+                    data-clickable="true"
                     className="flex items-center space-x-2 text-accent font-medium hover:translate-x-1 transition-transform duration-300"
                   >
                     <span className="text-sm">Детали</span>
@@ -361,6 +363,7 @@ export const ProjectsSection: React.FC = () => {
                 onClick={() => scrollToSection("contact")}
                 size="lg"
                 className="mobile-friendly-button relative overflow-hidden group shadow-lg hover:shadow-xl"
+                data-clickable="true"
               >
                 <span className="relative z-10 flex items-center space-x-2">
                   <span>Обсудить проект</span>
@@ -375,7 +378,7 @@ export const ProjectsSection: React.FC = () => {
 
       {/* Модальное окно детального просмотра */}
       {selectedProject && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => setSelectedProject(null)}>
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4" onClick={() => setSelectedProject(null)} data-clickable="true">
           <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto" onClick={(e) => e.stopPropagation()}>
             <div className="p-8">
               <div className="flex items-start justify-between mb-6">
@@ -385,6 +388,7 @@ export const ProjectsSection: React.FC = () => {
                 </div>
                 <button 
                   onClick={() => setSelectedProject(null)}
+                  data-clickable="true"
                   className="p-2 hover:bg-gray-100 rounded-full transition-colors"
                 >
                   ✕

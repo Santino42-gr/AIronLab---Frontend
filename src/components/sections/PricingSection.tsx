@@ -121,10 +121,10 @@ export default function PricingSection() {
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className={`relative h-full`}
+              className={`relative h-full non-interactive`}
             >
               <div
-                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 animate-fade-in h-full flex flex-col ${
+                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 animate-fade-in h-full flex flex-col non-interactive ${
                   plan.popular ? 'ring-2 ring-purple-500/50 bg-white/10' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
@@ -173,6 +173,7 @@ export default function PricingSection() {
                 {/* Кнопка выбора */}
                 <button
                   onClick={() => handlePlanSelect(plan.id)}
+                  data-clickable="true"
                   className={`mobile-friendly-button w-full rounded-xl font-semibold transition-all duration-300 ${
                     plan.popular
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
@@ -222,6 +223,7 @@ export default function PricingSection() {
             <button 
               onClick={() => scrollToSection("contact")}
               className="mobile-friendly-touch bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors duration-200 font-medium"
+              data-clickable="true"
             >
               Получите персональную консультацию
             </button>

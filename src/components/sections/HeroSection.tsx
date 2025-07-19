@@ -24,7 +24,7 @@ export const HeroSection: React.FC = () => {
       </div>
 
       {/* ИИ интерактивные элементы - меньше на мобильных */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none non-interactive">
         {/* Основные ИИ иконки - видны всегда */}
         <div className="absolute top-[15%] left-[8%] animate-float transition-transform duration-300">
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
@@ -173,6 +173,7 @@ export const HeroSection: React.FC = () => {
             onClick={handleCTAClick}
             size="lg"
             className="mobile-friendly-button relative overflow-hidden group w-full sm:w-auto shadow-lg hover:shadow-xl"
+            data-clickable="true"
           >
             <span className="relative z-10 flex items-center justify-center space-x-2">
               <span>Оставить заявку</span>
@@ -187,6 +188,7 @@ export const HeroSection: React.FC = () => {
             onClick={handleServicesClick}
             size="lg"
             className="mobile-friendly-button relative overflow-hidden group w-full sm:w-auto bg-white/50 backdrop-blur-sm border-foreground/20 hover:bg-white/70 hover:border-accent/40"
+            data-clickable="true"
           >
             <span className="relative z-10 flex items-center justify-center space-x-2">
               <Sparkles className="h-5 w-5 text-accent" />
@@ -196,16 +198,16 @@ export const HeroSection: React.FC = () => {
         </div>
 
         {/* Статистика или дополнительная информация */}
-        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 animate-fade-in px-4" style={{ animationDelay: "1.8s" }}>
-          <div className="text-center">
+        <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 animate-fade-in px-4 non-interactive" style={{ animationDelay: "1.8s" }}>
+          <div className="text-center non-interactive">
             <div className="text-responsive-stats text-accent mb-1 sm:mb-2">30+</div>
             <div className="text-responsive-small text-foreground/60">Успешных проектов</div>
           </div>
-          <div className="text-center">
+          <div className="text-center non-interactive">
             <div className="text-responsive-stats text-accent mb-1 sm:mb-2">24/7</div>
             <div className="text-responsive-small text-foreground/60">Поддержка клиентов</div>
           </div>
-          <div className="text-center">
+          <div className="text-center non-interactive">
             <div className="text-responsive-stats text-accent mb-1 sm:mb-2">+120%</div>
             <div className="text-responsive-small text-foreground/60">Рост эффективности бизнеса</div>
           </div>

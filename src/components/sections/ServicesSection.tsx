@@ -145,6 +145,7 @@ export const ServicesSection: React.FC = () => {
             <button
               key={index}
               onClick={() => setActiveCategory(index)}
+              data-clickable="true"
               className={`flex items-center space-x-2 px-4 sm:px-6 py-2 sm:py-3 rounded-full border transition-all duration-300 text-sm sm:text-base ${
                 activeCategory === index
                   ? "bg-accent text-white border-accent shadow-lg"
@@ -163,7 +164,7 @@ export const ServicesSection: React.FC = () => {
           {currentServices.map((service, index) => (
             <div
               key={`${activeCategory}-${index}`}
-              className="relative p-6 sm:p-8 bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 animate-slide-up"
+              className="relative p-6 sm:p-8 bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 animate-slide-up non-interactive"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative z-10">
@@ -223,6 +224,7 @@ export const ServicesSection: React.FC = () => {
                 onClick={() => scrollToSection("contact")}
                 size="lg"
                 className="mobile-friendly-button relative overflow-hidden group shadow-lg hover:shadow-xl"
+                data-clickable="true"
               >
                 <span className="relative z-10 flex items-center space-x-2">
                   <span>Получить консультацию</span>

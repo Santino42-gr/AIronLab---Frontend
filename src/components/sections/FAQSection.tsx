@@ -131,6 +131,7 @@ export default function FAQSection() {
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <button
             onClick={() => setSelectedCategory('all')}
+            data-clickable="true"
             className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
               selectedCategory === 'all'
                 ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
@@ -143,6 +144,7 @@ export default function FAQSection() {
             <button
               key={key}
               onClick={() => setSelectedCategory(key)}
+              data-clickable="true"
               className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                 selectedCategory === key
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg'
@@ -166,6 +168,7 @@ export default function FAQSection() {
                 {/* Вопрос (кликабельный заголовок) */}
                 <button
                   onClick={() => toggleItem(item.id)}
+                  data-clickable="true"
                   className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
                 >
                   <div className="flex items-center space-x-4">
@@ -218,6 +221,7 @@ export default function FAQSection() {
               <button 
                 onClick={() => scrollToSection("contact")}
                 className="mobile-friendly-button bg-white/10 text-white border border-white/20 rounded-xl font-semibold hover:bg-white/20 transition-colors duration-200 flex items-center justify-center"
+                data-clickable="true"
               >
                 <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />

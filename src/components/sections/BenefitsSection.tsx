@@ -92,7 +92,7 @@ export const BenefitsSection: React.FC = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="relative p-6 sm:p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-accent/10 animate-slide-up"
+              className="relative p-6 sm:p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-accent/10 animate-slide-up non-interactive"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative z-10">
@@ -150,20 +150,20 @@ export const BenefitsSection: React.FC = () => {
 
             <div className="relative">
               {/* Декоративная сетка */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.2s" }}>
+              <div className="grid grid-cols-2 gap-4 non-interactive">
+                <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up non-interactive" style={{ animationDelay: "1.2s" }}>
                   <div className="text-responsive-stats text-accent mb-2">50+</div>
                   <div className="text-responsive-small text-foreground/60">ИИ-моделей</div>
                 </div>
-                <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.3s" }}>
+                <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up non-interactive" style={{ animationDelay: "1.3s" }}>
                   <div className="text-responsive-stats text-accent mb-2">15</div>
                   <div className="text-responsive-small text-foreground/60">Отраслей</div>
                 </div>
-                <div className="bg-accent/10 rounded-2xl p-4 md:p-6 text-center animate-slide-up" style={{ animationDelay: "1.4s" }}>
+                <div className="bg-accent/10 rounded-2xl p-4 md:p-6 text-center animate-slide-up non-interactive" style={{ animationDelay: "1.4s" }}>
                   <div className="text-responsive-stats text-accent mb-2">500+</div>
                   <div className="text-responsive-small text-foreground/60 leading-tight">Сэкономленных часов</div>
                 </div>
-                <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.5s" }}>
+                <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up non-interactive" style={{ animationDelay: "1.5s" }}>
                   <div className="text-responsive-stats text-accent mb-2">98%</div>
                   <div className="text-responsive-small text-foreground/60">Довольных клиентов</div>
                 </div>

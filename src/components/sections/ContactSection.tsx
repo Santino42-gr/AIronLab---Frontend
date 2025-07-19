@@ -153,6 +153,7 @@ export default function ContactSection() {
                 onClick={() => {
                   resetForm();
                 }}
+                data-clickable="true"
                 className="mt-8 px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors"
               >
                 Отправить еще одну заявку
@@ -191,6 +192,7 @@ export default function ContactSection() {
                     href="https://t.me/Aironlab" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-clickable="true"
                     className="group relative p-4 bg-white/5 hover:bg-blue-500/20 rounded-xl border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                   >
                     <div className="flex items-center space-x-3">
@@ -210,6 +212,7 @@ export default function ContactSection() {
                     href="https://www.instagram.com/_grebenshikov_/" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-clickable="true"
                     className="group relative p-4 bg-white/5 hover:bg-pink-500/20 rounded-xl border border-white/10 hover:border-pink-400/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                   >
                     <div className="flex items-center space-x-3">
@@ -231,6 +234,7 @@ export default function ContactSection() {
                     href="https://vk.com/AIronlab" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-clickable="true"
                     className="group relative p-4 bg-white/5 hover:bg-blue-600/20 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                   >
                     <div className="flex items-center space-x-3">
@@ -252,6 +256,7 @@ export default function ContactSection() {
                     href="https://vc.ru/id709930" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-clickable="true"
                     className="group relative p-4 bg-white/5 hover:bg-orange-500/20 rounded-xl border border-white/10 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                   >
                     <div className="flex items-center space-x-3">
@@ -273,6 +278,7 @@ export default function ContactSection() {
                     href="https://habr.com/ru/users/AIronLab/" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-clickable="true"
                     className="group relative p-4 bg-white/5 hover:bg-teal-500/20 rounded-xl border border-white/10 hover:border-teal-400/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                   >
                     <div className="flex items-center space-x-3">
@@ -292,6 +298,7 @@ export default function ContactSection() {
                     href="https://teletype.in/@aironlab" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    data-clickable="true"
                     className="group relative p-4 bg-white/5 hover:bg-gray-600/20 rounded-xl border border-white/10 hover:border-gray-500/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1"
                   >
                     <div className="flex items-center space-x-3">
@@ -432,7 +439,7 @@ export default function ContactSection() {
                   />
                   <label htmlFor="agreement" className="text-sm text-blue-100">
                     Я согласен на{' '}
-                    <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline">
+                    <a href="/privacy" className="text-blue-400 hover:text-blue-300 underline" data-clickable="true">
                       обработку персональных данных
                     </a>{' '}
                     и получение информационных сообщений *
@@ -443,6 +450,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
+                  data-clickable="true"
                   className="w-full py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:from-gray-500 disabled:to-gray-600 disabled:cursor-not-allowed text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 disabled:scale-100"
                 >
                   {isSubmitting ? (
