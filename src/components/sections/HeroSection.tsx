@@ -162,7 +162,7 @@ export const HeroSection: React.FC = () => {
 
         {/* Дополнительное описание */}
         <div className="relative">
-          <p className="text-sm sm:text-base md:text-lg text-foreground/60 mb-8 sm:mb-12 max-w-2xl mx-auto animate-fade-in hover:text-foreground/80 transition-colors duration-300 px-4" style={{ animationDelay: "1.2s" }}>
+          <p className="text-responsive-body text-foreground/60 mb-8 sm:mb-12 max-w-2xl mx-auto animate-fade-in hover:text-foreground/80 transition-colors duration-300 px-4" style={{ animationDelay: "1.2s" }}>
             Автоматизируем рост выручки, оптимизируем ресурсы компании и создаём устойчивые конкурентные преимущества
           </p>
         </div>
@@ -198,16 +198,16 @@ export const HeroSection: React.FC = () => {
         {/* Статистика или дополнительная информация */}
         <div className="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 animate-fade-in px-4" style={{ animationDelay: "1.8s" }}>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-2xl sm:text-3xl font-bold text-accent mb-1 sm:mb-2">30+</div>
-            <div className="text-xs sm:text-sm text-foreground/60">Успешных проектов</div>
+            <div className="text-responsive-stats text-accent mb-1 sm:mb-2">30+</div>
+            <div className="text-responsive-small text-foreground/60">Успешных проектов</div>
           </div>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-2xl sm:text-3xl font-bold text-accent mb-1 sm:mb-2">24/7</div>
-            <div className="text-xs sm:text-sm text-foreground/60">Поддержка клиентов</div>
+            <div className="text-responsive-stats text-accent mb-1 sm:mb-2">24/7</div>
+            <div className="text-responsive-small text-foreground/60">Поддержка клиентов</div>
           </div>
           <div className="text-center hover:scale-105 transition-transform duration-300 cursor-pointer">
-            <div className="text-2xl sm:text-3xl font-bold text-accent mb-1 sm:mb-2">+120%</div>
-            <div className="text-xs sm:text-sm text-foreground/60">Рост эффективности бизнеса</div>
+            <div className="text-responsive-stats text-accent mb-1 sm:mb-2">+120%</div>
+            <div className="text-responsive-small text-foreground/60">Рост эффективности бизнеса</div>
           </div>
         </div>
       </div>

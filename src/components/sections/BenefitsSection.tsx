@@ -77,7 +77,7 @@ export const BenefitsSection: React.FC = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                      <h2 className="text-responsive-h1 text-foreground mb-6">
             Преимущества
             <span className="text-accent"> AIronLab</span>
           </h2>
@@ -129,7 +129,7 @@ export const BenefitsSection: React.FC = () => {
         <div className="bg-white/40 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-accent/10 animate-fade-in" style={{ animationDelay: "0.8s" }}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold text-foreground mb-6">
+              <h3 className="text-responsive-h3 text-foreground mb-6">
                 Что делает нас 
                 <span className="text-accent"> особенными?</span>
               </h3>
@@ -155,20 +155,20 @@ export const BenefitsSection: React.FC = () => {
               {/* Декоративная сетка */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.2s" }}>
-                  <div className="text-3xl font-bold text-accent mb-2">50+</div>
-                  <div className="text-sm text-foreground/60">ИИ-моделей</div>
+                  <div className="text-responsive-stats text-accent mb-2">50+</div>
+                  <div className="text-responsive-small text-foreground/60">ИИ-моделей</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.3s" }}>
-                  <div className="text-3xl font-bold text-accent mb-2">15</div>
-                  <div className="text-sm text-foreground/60">Отраслей</div>
+                  <div className="text-responsive-stats text-accent mb-2">15</div>
+                  <div className="text-responsive-small text-foreground/60">Отраслей</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.4s" }}>
-                  <div className="text-3xl font-bold text-accent mb-2">500+</div>
-                  <div className="text-sm text-foreground/60">Сэкономленных часов</div>
+                  <div className="text-responsive-stats text-accent mb-2">500+</div>
+                  <div className="text-responsive-small text-foreground/60">Сэкономленных часов</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.5s" }}>
-                  <div className="text-3xl font-bold text-accent mb-2">98%</div>
-                  <div className="text-sm text-foreground/60">Довольных клиентов</div>
+                  <div className="text-responsive-stats text-accent mb-2">98%</div>
+                  <div className="text-responsive-small text-foreground/60">Довольных клиентов</div>
                 </div>
               </div>
             </div>

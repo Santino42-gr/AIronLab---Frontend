@@ -47,17 +47,45 @@
     background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
   }
 
-  /* Адаптивные утилиты */
+  /* Система типографики AIronLab */
+  /* Главные заголовки (Hero, основные секции) */
   .text-responsive-h1 {
-    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
   }
 
+  /* Подзаголовки секций */
   .text-responsive-h2 {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
   }
 
+  /* Заголовки карточек, элементов */
   .text-responsive-h3 {
-    @apply text-lg sm:text-xl md:text-2xl;
+    @apply text-xl md:text-2xl lg:text-3xl font-bold;
+  }
+
+  /* Мелкие заголовки */
+  .text-responsive-h4 {
+    @apply text-lg md:text-xl font-bold;
+  }
+
+  /* Основной текст */
+  .text-responsive-body {
+    @apply text-base md:text-lg;
+  }
+
+  /* Лид-текст (важные описания) */
+  .text-responsive-lead {
+    @apply text-lg md:text-xl;
+  }
+
+  /* Статистика и цифры */
+  .text-responsive-stats {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold;
+  }
+
+  /* Мелкий текст */
+  .text-responsive-small {
+    @apply text-sm md:text-base;
   }
 
   .spacing-responsive {

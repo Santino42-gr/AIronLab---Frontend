@@ -116,7 +116,7 @@ export default function FAQSection() {
       <div className="container mx-auto px-4 relative z-10">
         {/* Заголовок секции */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                      <h2 className="text-responsive-h1 text-gray-900 mb-6">
             Часто задаваемые
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               вопросы
@@ -210,7 +210,7 @@ export default function FAQSection() {
         {/* Блок призыва к действию */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-3xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Не нашли ответ на свой вопрос?</h3>
+                          <h3 className="text-responsive-h3 mb-4">Не нашли ответ на свой вопрос?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Наши эксперты готовы ответить на любые вопросы о ИИ-решениях и помочь с выбором оптимального решения для вашего бизнеса
             </p>

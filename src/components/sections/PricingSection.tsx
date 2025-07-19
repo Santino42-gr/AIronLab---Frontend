@@ -142,7 +142,7 @@ export default function PricingSection() {
                 {/* Иконка тарифа */}
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${plan.color} p-3 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="w-full h-full bg-white rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">
+                    <span className="text-responsive-h4">
                       {plan.id === 'template' && '📋'}
                       {plan.id === 'custom' && '🎨'}
                       {plan.id === 'integration' && '🔗'}
@@ -152,11 +152,11 @@ export default function PricingSection() {
                 </div>
                 {/* Информация о тарифе */}
                 <div className="mb-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{plan.name}</h3>
+                  <h3 className="text-responsive-h4 text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
                   <div className="flex items-baseline mb-4">
-                    <span className="text-3xl font-bold text-white">{plan.price}</span>
-                    <span className="text-lg text-gray-400 ml-1">{plan.period}</span>
+                    <span className="text-responsive-stats text-white">{plan.price}</span>
+                    <span className="text-responsive-body text-gray-400 ml-1">{plan.period}</span>
                   </div>
                 </div>
                 {/* Список функций */}

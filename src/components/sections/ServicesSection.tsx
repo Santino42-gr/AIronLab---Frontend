@@ -130,7 +130,7 @@ export const ServicesSection: React.FC = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                      <h2 className="text-responsive-h1 text-foreground mb-6">
             Услуги
             <span className="text-accent"> AIronLab</span>
           </h2>
@@ -214,7 +214,7 @@ export const ServicesSection: React.FC = () => {
         {/* Призыв к действию */}
         <div className="bg-gradient-to-r from-accent/10 via-white/40 to-accent/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-accent/20 animate-fade-in" style={{ animationDelay: "0.8s" }}>
           <div className="text-center">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+                          <h3 className="text-responsive-h3 text-foreground mb-4">
               Готовы внедрить ИИ в ваш бизнес?
             </h3>
             <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
@@ -238,20 +238,20 @@ export const ServicesSection: React.FC = () => {
             {/* Статистика по проектам */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent mb-1">50+</div>
-                <div className="text-sm text-foreground/60">Внедренных решений</div>
+                <div className="text-responsive-stats text-accent mb-1">50+</div>
+                <div className="text-responsive-small text-foreground/60">Внедренных решений</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent mb-1">15</div>
-                <div className="text-sm text-foreground/60">Отраслей опыта</div>
+                <div className="text-responsive-stats text-accent mb-1">15</div>
+                <div className="text-responsive-small text-foreground/60">Отраслей опыта</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent mb-1">98%</div>
-                <div className="text-sm text-foreground/60">Довольных клиентов</div>
+                <div className="text-responsive-stats text-accent mb-1">98%</div>
+                <div className="text-responsive-small text-foreground/60">Довольных клиентов</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-accent mb-1">24/7</div>
-                <div className="text-sm text-foreground/60">Техподдержка</div>
+                <div className="text-responsive-stats text-accent mb-1">24/7</div>
+                <div className="text-responsive-small text-foreground/60">Техподдержка</div>
               </div>
             </div>
           </div>

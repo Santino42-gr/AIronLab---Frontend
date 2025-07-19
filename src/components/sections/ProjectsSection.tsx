@@ -203,7 +203,7 @@ export const ProjectsSection: React.FC = () => {
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+                      <h2 className="text-responsive-h1 text-foreground mb-6">
             Проекты
             <span className="text-accent"> AIronLab</span>
           </h2>
@@ -215,20 +215,20 @@ export const ProjectsSection: React.FC = () => {
           {/* Статистика */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             <div className="text-center p-4 bg-white/40 backdrop-blur-sm rounded-2xl border border-accent/10">
-              <div className="text-2xl font-bold text-accent mb-1">{stats.totalProjects}+</div>
-              <div className="text-sm text-foreground/60">Проектов</div>
+              <div className="text-responsive-stats text-accent mb-1">{stats.totalProjects}+</div>
+              <div className="text-responsive-small text-foreground/60">Проектов</div>
             </div>
             <div className="text-center p-4 bg-white/40 backdrop-blur-sm rounded-2xl border border-accent/10">
-              <div className="text-2xl font-bold text-accent mb-1">{stats.avgImprovement}</div>
-              <div className="text-sm text-foreground/60">Ср. улучшение</div>
+              <div className="text-responsive-stats text-accent mb-1">{stats.avgImprovement}</div>
+              <div className="text-responsive-small text-foreground/60">Ср. улучшение</div>
             </div>
             <div className="text-center p-4 bg-white/40 backdrop-blur-sm rounded-2xl border border-accent/10">
-              <div className="text-2xl font-bold text-accent mb-1">{stats.clientSatisfaction}</div>
-              <div className="text-sm text-foreground/60">Довольных клиентов</div>
+              <div className="text-responsive-stats text-accent mb-1">{stats.clientSatisfaction}</div>
+              <div className="text-responsive-small text-foreground/60">Довольных клиентов</div>
             </div>
             <div className="text-center p-4 bg-white/40 backdrop-blur-sm rounded-2xl border border-accent/10">
-              <div className="text-2xl font-bold text-accent mb-1">24/7</div>
-              <div className="text-sm text-foreground/60">Поддержка</div>
+              <div className="text-responsive-stats text-accent mb-1">24/7</div>
+              <div className="text-responsive-small text-foreground/60">Поддержка</div>
             </div>
           </div>
 
@@ -349,7 +349,7 @@ export const ProjectsSection: React.FC = () => {
         {/* Призыв к действию */}
         <div className="bg-gradient-to-r from-accent/10 via-white/50 to-accent/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 border border-accent/20 animate-fade-in" style={{ animationDelay: "0.8s" }}>
           <div className="text-center">
-            <h3 className="text-3xl font-bold text-foreground mb-4">
+                          <h3 className="text-responsive-h3 text-foreground mb-4">
               Ваш проект может быть следующим!
             </h3>
             <p className="text-lg text-foreground/70 mb-8 max-w-2xl mx-auto">
@@ -380,7 +380,7 @@ export const ProjectsSection: React.FC = () => {
             <div className="p-8">
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{selectedProject.title}</h3>
+                  <h3 className="text-responsive-h3 text-foreground mb-2">{selectedProject.title}</h3>
                   <p className="text-accent font-medium">{selectedProject.client}</p>
                 </div>
                 <button 
@@ -396,7 +396,7 @@ export const ProjectsSection: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
                 {selectedProject.results.map((result, index) => (
                   <div key={index} className="text-center p-4 bg-accent/5 rounded-2xl">
-                    <div className="text-2xl font-bold text-accent mb-1">{result.value}</div>
+                    <div className="text-responsive-stats text-accent mb-1">{result.value}</div>
                     <div className="text-sm text-foreground/60 mb-1">{result.metric}</div>
                     <div className="text-xs text-green-600 font-medium">{result.improvement}</div>
                   </div>

@@ -124,8 +124,8 @@ export default function ContactSection() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-12 border border-white/20">
-              <div className="text-6xl mb-6">✅</div>
-              <h2 className="text-4xl font-bold text-white mb-6">
+                      <div className="text-6xl mb-6">✅</div>
+        <h2 className="text-responsive-h2 text-white mb-6">
                 Заявка отправлена!
               </h2>
               <p className="text-xl text-blue-100 mb-8">
@@ -169,7 +169,7 @@ export default function ContactSection() {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-5xl font-bold text-white mb-6">
+            <h2 className="text-responsive-h1 text-white mb-6">
               Давайте обсудим ваш проект
             </h2>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto">
@@ -181,7 +181,7 @@ export default function ContactSection() {
             {/* Социальные сети и контакты */}
             <div className="space-y-8">
               <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6">Мы в социальных сетях</h3>
+                <h3 className="text-responsive-h3 text-white mb-6">Мы в социальных сетях</h3>
                 <p className="text-blue-100 mb-8">Следите за новостями, кейсами и обновлениями AIronLab</p>
                 
                 {/* Сетка социальных сетей */}
@@ -340,7 +340,7 @@ export default function ContactSection() {
 
             {/* Форма */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-white mb-6">Отправить заявку</h3>
+                              <h3 className="text-responsive-h3 text-white mb-6">Отправить заявку</h3>
               
               {error && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/30 rounded-xl">
