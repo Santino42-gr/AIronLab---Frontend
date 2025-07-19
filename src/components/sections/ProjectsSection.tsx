@@ -256,7 +256,7 @@ export const ProjectsSection: React.FC = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 animate-slide-up overflow-hidden"
+              className="relative bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 animate-slide-up overflow-hidden"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Featured badge */}

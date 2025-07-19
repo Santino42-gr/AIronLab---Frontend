@@ -121,15 +121,13 @@ export default function PricingSection() {
           {pricingPlans.map((plan, index) => (
             <div
               key={plan.id}
-              className={`group relative h-full`}
+              className={`relative h-full`}
             >
               <div
-                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 transition-all duration-500 hover:scale-105 hover:bg-white/10 animate-fade-in h-full flex flex-col ${
+                className={`relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 animate-fade-in h-full flex flex-col ${
                   plan.popular ? 'ring-2 ring-purple-500/50 bg-white/10' : ''
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
-                onMouseEnter={() => setHoveredPlan(plan.id)}
-                onMouseLeave={() => setHoveredPlan(null)}
               >
                 {/* Badge для популярного тарифа */}
                 {plan.popular && (
@@ -140,7 +138,7 @@ export default function PricingSection() {
                   </div>
                 )}
                 {/* Иконка тарифа */}
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${plan.color} p-3 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${plan.color} p-3 mb-6`}>
                   <div className="w-full h-full bg-white rounded-xl flex items-center justify-center">
                     <span className="text-responsive-h4">
                       {plan.id === 'template' && '📋'}

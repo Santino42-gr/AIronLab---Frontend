@@ -23,9 +23,9 @@ export const HeroSection: React.FC = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial opacity-30"></div>
       </div>
 
-      {/* ИИ интерактивные элементы */}
+      {/* ИИ интерактивные элементы - меньше на мобильных */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* ИИ иконки в безопасных позициях - не наплывают на текст */}
+        {/* Основные ИИ иконки - видны всегда */}
         <div className="absolute top-[15%] left-[8%] animate-float transition-transform duration-300">
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Brain className="h-7 w-7 text-accent" />
@@ -50,80 +50,80 @@ export const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="absolute top-[35%] left-[88%] animate-float transition-transform duration-300" style={{ animationDelay: "1.8s" }}>
+        {/* Дополнительные иконки - только на планшетах и десктопах */}
+        <div className="hidden md:block absolute top-[35%] left-[88%] animate-float transition-transform duration-300" style={{ animationDelay: "1.8s" }}>
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Eye className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[55%] left-[15%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.3s" }}>
+        <div className="hidden md:block absolute top-[55%] left-[15%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.3s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Database className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[8%] left-[65%] animate-float transition-transform duration-300" style={{ animationDelay: "0.5s" }}>
+        <div className="hidden lg:block absolute top-[8%] left-[65%] animate-float transition-transform duration-300" style={{ animationDelay: "0.5s" }}>
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Activity className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[45%] left-[2%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "1.5s" }}>
+        <div className="hidden lg:block absolute top-[45%] left-[2%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "1.5s" }}>
           <div className="p-3.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Layers className="h-7 w-7 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[58%] right-[25%] animate-float transition-transform duration-300" style={{ animationDelay: "2.1s" }}>
+        <div className="hidden md:block absolute top-[58%] right-[25%] animate-float transition-transform duration-300" style={{ animationDelay: "2.1s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Lightbulb className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[5%] left-[25%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "1.7s" }}>
+        <div className="hidden lg:block absolute top-[5%] left-[25%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "1.7s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <CircuitBoard className="h-5 w-5 text-primary" />
           </div>
         </div>
 
-        {/* Дополнительные уникальные ИИ-элементы в безопасных зонах */}
-        <div className="absolute top-[85%] left-[25%] animate-float transition-transform duration-300" style={{ animationDelay: "1.9s" }}>
+        <div className="hidden lg:block absolute top-[85%] left-[25%] animate-float transition-transform duration-300" style={{ animationDelay: "1.9s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Settings className="h-6 w-6 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[18%] right-[25%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.7s" }}>
+        <div className="hidden lg:block absolute top-[18%] right-[25%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.7s" }}>
           <div className="p-3 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Workflow className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[42%] right-[5%] animate-float transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
+        <div className="hidden lg:block absolute top-[42%] right-[5%] animate-float transition-transform duration-300" style={{ animationDelay: "0.9s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Radar className="h-5 w-5 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[88%] right-[15%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.4s" }}>
+        <div className="hidden lg:block absolute top-[88%] right-[15%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "2.4s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Search className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[82%] left-[82%] animate-float transition-transform duration-300" style={{ animationDelay: "1.3s" }}>
+        <div className="hidden lg:block absolute top-[82%] left-[82%] animate-float transition-transform duration-300" style={{ animationDelay: "1.3s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Cloud className="h-5 w-5 text-accent" />
           </div>
         </div>
 
-        <div className="absolute top-[12%] right-[75%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "3.1s" }}>
+        <div className="hidden lg:block absolute top-[12%] right-[75%] animate-float-delayed transition-transform duration-300" style={{ animationDelay: "3.1s" }}>
           <div className="p-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-primary/20">
             <Monitor className="h-6 w-6 text-primary" />
           </div>
         </div>
 
-        <div className="absolute top-[92%] left-[65%] animate-float transition-transform duration-300" style={{ animationDelay: "2.8s" }}>
+        <div className="hidden lg:block absolute top-[92%] left-[65%] animate-float transition-transform duration-300" style={{ animationDelay: "2.8s" }}>
           <div className="p-2 bg-white/10 backdrop-blur-sm rounded-full border border-accent/20">
             <Atom className="h-5 w-5 text-accent" />
           </div>
@@ -132,7 +132,7 @@ export const HeroSection: React.FC = () => {
 
       <div className="container-custom text-center relative z-10">
         {/* Badge */}
-        <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-accent/20 rounded-full px-6 py-3 mb-8 animate-slide-down shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+        <div className="inline-flex items-center space-x-2 bg-white/80 backdrop-blur-sm border border-accent/20 rounded-full px-6 py-3 mb-8 animate-slide-down shadow-lg">
           <Zap className="h-4 w-4 text-accent animate-pulse" />
           <span className="text-sm font-medium text-foreground/80">
             ИИ автоматизации для бизнеса
@@ -141,11 +141,11 @@ export const HeroSection: React.FC = () => {
 
         {/* Заголовок с иконкой и интерактивными элементами */}
         <div className="relative">
-          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 animate-slide-up hover:scale-105 transition-transform duration-500" style={{ animationDelay: "0.6s" }}>
+          <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6 animate-slide-up" style={{ animationDelay: "0.6s" }}>
             <img
               src={getImagePath("/images/icon.png")}
               alt="AIronLab Icon"
-              className="h-12 sm:h-16 md:h-20 object-contain hover:rotate-12 transition-transform duration-300"
+              className="h-12 sm:h-16 md:h-20 object-contain"
             />
             <h1 className="text-responsive-h1 font-bold text-black">
               AIronLab

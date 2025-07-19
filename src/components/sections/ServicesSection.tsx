@@ -163,16 +163,13 @@ export const ServicesSection: React.FC = () => {
           {currentServices.map((service, index) => (
             <div
               key={`${activeCategory}-${index}`}
-              className="group relative p-6 sm:p-8 bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:shadow-2xl hover:-translate-y-3 animate-slide-up"
+              className="relative p-6 sm:p-8 bg-white/70 backdrop-blur-sm rounded-3xl border border-accent/10 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Градиентная подложка при ховере */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
               <div className="relative z-10">
                 {/* Иконка и цена */}
                 <div className="flex items-start justify-between mb-6">
-                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
+                  <div className="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center">
                     {service.icon}
                   </div>
                   <div className="text-right">

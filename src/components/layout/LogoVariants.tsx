@@ -41,7 +41,7 @@ export const Logo: React.FC<LogoProps> = ({
   );
 
   return (
-    <div className={`flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer ${className}`}>
+    <div className={`flex items-center ${className}`}>
       {variant === "full" && (
         <>
           <div className="mr-3">

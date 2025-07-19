@@ -92,15 +92,12 @@ export const BenefitsSection: React.FC = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative p-6 sm:p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-accent/10 hover:border-accent/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 animate-slide-up"
+              className="relative p-6 sm:p-8 bg-white/60 backdrop-blur-sm rounded-2xl border border-accent/10 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              {/* Hover эффект */}
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
               <div className="relative z-10">
                 {/* Иконка */}
-                <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition-colors duration-300">
+                <div className="w-16 h-16 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                   {benefit.icon}
                 </div>
 
@@ -162,9 +159,9 @@ export const BenefitsSection: React.FC = () => {
                   <div className="text-responsive-stats text-accent mb-2">15</div>
                   <div className="text-responsive-small text-foreground/60">Отраслей</div>
                 </div>
-                <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.4s" }}>
+                <div className="bg-accent/10 rounded-2xl p-4 md:p-6 text-center animate-slide-up" style={{ animationDelay: "1.4s" }}>
                   <div className="text-responsive-stats text-accent mb-2">500+</div>
-                  <div className="text-responsive-small text-foreground/60">Сэкономленных часов</div>
+                  <div className="text-responsive-small text-foreground/60 leading-tight">Сэкономленных часов</div>
                 </div>
                 <div className="bg-accent/10 rounded-2xl p-6 text-center animate-slide-up" style={{ animationDelay: "1.5s" }}>
                   <div className="text-responsive-stats text-accent mb-2">98%</div>

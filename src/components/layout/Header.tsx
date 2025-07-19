@@ -107,7 +107,7 @@ export const Header: React.FC = () => {
       <nav className="container-custom py-4">
         <div className="flex items-center justify-between h-12">
           {/* Логотип */}
-          <div className="flex items-center hover:scale-105 transition-transform duration-200 cursor-pointer">
+          <div className="flex items-center">
             <img
               src={getImagePath("/images/logo.png")}
               alt="AIronLab Logo"
