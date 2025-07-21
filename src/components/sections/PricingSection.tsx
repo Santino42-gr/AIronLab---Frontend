@@ -153,7 +153,7 @@ export default function PricingSection() {
                   <h3 className="text-responsive-h4 text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
                   <div className="mb-4">
-                    <span className="text-responsive-stats text-white whitespace-nowrap">{plan.price}</span>
+                    <span className="text-xl sm:text-2xl font-bold text-white whitespace-nowrap">{plan.price}</span>
                     {plan.period && (
                       <span className="text-responsive-body text-gray-400 ml-1">{plan.period}</span>
                     )}
