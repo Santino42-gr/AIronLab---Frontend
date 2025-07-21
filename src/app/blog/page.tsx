@@ -1,5 +1,5 @@
 import { BlogHeader } from '@/components/layout/BlogHeader';
-import { Footer } from '@/components/layout/Footer';
+import { LightFooter } from '@/components/layout/LightFooter';
 
 export default function BlogPage() {
   return (
@@ -21,7 +21,7 @@ export default function BlogPage() {
             {/* Пример статьи */}
             <div className="bg-gray-50 rounded-2xl p-8 mb-8 border border-gray-200">
               <div className="mb-4">
-                <span className="text-purple-600 text-sm">15 января 2025</span>
+                <span className="text-purple-600 text-sm">20 июля 2025</span>
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Как ИИ изменит бизнес в 2025 году
@@ -68,7 +68,7 @@ export default function BlogPage() {
           </div>
         </div>
       </main>
-      <Footer />
+      <LightFooter />
     </>
   );
 } 

@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import { Header } from './Header';
-import { Footer } from './Footer';
+import { BlogHeader } from './BlogHeader';
+import { LightFooter } from './LightFooter';
 
 interface LegalPageLayoutProps {
   title: string;
@@ -17,7 +17,7 @@ export const LegalPageLayout: React.FC<LegalPageLayoutProps> = ({
 }) => {
   return (
     <>
-      <Header />
+      <BlogHeader />
       <main className="min-h-screen bg-white py-20">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
@@ -53,7 +53,7 @@ export const LegalPageLayout: React.FC<LegalPageLayoutProps> = ({
           </div>
         </div>
       </main>
-      <Footer />
+      <LightFooter />
     </>
   );
 }; 
