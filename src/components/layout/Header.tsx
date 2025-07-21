@@ -71,15 +71,9 @@ export const Header: React.FC = () => {
     };
   }, [isMobileMenuOpen]);
 
-  const handleNavClick = (sectionId: string, isExternal?: boolean) => {
-    if (isExternal) {
-      // Временная заглушка для будущей страницы блога
-      if (sectionId === "blog") {
-        alert("Страница блога находится в разработке. Скоро здесь будут интересные статьи об ИИ и технологиях!");
-        return;
-      }
-      // В будущем здесь будет навигация на другие страницы
-      // window.location.href = href;
+  const handleNavClick = (sectionId: string, isExternal?: boolean, href?: string) => {
+    if (isExternal && href) {
+      window.location.href = href;
     } else {
       scrollToSection(sectionId);
     }
@@ -120,20 +114,20 @@ export const Header: React.FC = () => {
             {navigationItems.map((item, index) => (
               <button
                 key={item.id}
-                onClick={() => handleNavClick(item.id, item.isExternal)}
+                onClick={() => handleNavClick(item.id, item.isExternal, item.href)}
                 data-clickable="true"
                 className={cn(
                   "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 relative",
                   "hover:scale-105 active:scale-95",
                   "animate-fade-in",
-                  activeSection === item.id
+                  activeSection === item.id && !item.isExternal
                     ? "text-accent bg-accent/10"
                     : "text-foreground/80 hover:text-foreground hover:bg-white/10"
                 )}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {item.name}
-                {activeSection === item.id && (
+                {activeSection === item.id && !item.isExternal && (
                   <div className="absolute inset-0 bg-accent/5 rounded-lg -z-10 animate-scale-in" />
                 )}
               </button>
@@ -187,13 +181,13 @@ export const Header: React.FC = () => {
               {navigationItems.map((item, index) => (
                 <button
                   key={item.id}
-                  onClick={() => handleNavClick(item.id, item.isExternal)}
+                  onClick={() => handleNavClick(item.id, item.isExternal, item.href)}
                   data-clickable="true"
                   className={cn(
                     "block w-full text-left px-4 py-3 rounded-lg text-base font-medium",
                     "transition-all duration-200 active:scale-98",
                     "animate-slide-up",
-                    activeSection === item.id
+                    activeSection === item.id && !item.isExternal
                       ? "text-accent bg-accent/10"
                       : "text-foreground/80 hover:text-foreground hover:bg-white/10"
                   )}
