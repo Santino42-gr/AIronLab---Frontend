@@ -104,82 +104,9 @@ export default function RootLayout({
   return (
     <html lang="ru" className={calleo.variable}>
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // КРИТИЧЕСКАЯ ЗАЩИТА ОТ СЛУЧАЙНОГО СКРОЛИНГА НА МОБИЛЬНЫХ
-              (function() {
-                function isMobile() {
-                  return window.innerWidth <= 768;
-                }
-
-                function isInteractiveElement(element) {
-                  if (!element) return false;
-                  
-                  // Проверяем интерактивные теги
-                  const interactiveTags = ['BUTTON', 'A', 'INPUT', 'SELECT', 'TEXTAREA'];
-                  if (interactiveTags.includes(element.tagName)) return true;
-                  
-                  // Проверяем data-clickable
-                  if (element.hasAttribute('data-clickable') && element.getAttribute('data-clickable') === 'true') return true;
-                  
-                  // Проверяем role
-                  if (element.getAttribute('role') === 'button') return true;
-                  
-                  return false;
-                }
-
-                function findInteractiveParent(element) {
-                  let current = element;
-                  while (current && current !== document.body) {
-                    if (isInteractiveElement(current)) return current;
-                    current = current.parentElement;
-                  }
-                  return null;
-                }
-
-                                 function isScrollContainer(element) {
-                   let current = element;
-                   while (current && current !== document.body) {
-                     if (current.hasAttribute('data-scroll-container')) return true;
-                     current = current.parentElement;
-                   }
-                   return false;
-                 }
-
-                 function blockEvent(event) {
-                   if (!isMobile()) return;
-                   
-                   const target = event.target;
-                   const interactiveParent = findInteractiveParent(target);
-                   
-                   // Разрешаем скролинг в scroll-контейнерах
-                   if (isScrollContainer(target)) return;
-                   
-                   // Если нет интерактивного родителя - блокируем событие
-                   if (!interactiveParent) {
-                     event.preventDefault();
-                     event.stopPropagation();
-                     event.stopImmediatePropagation();
-                     return false;
-                   }
-                 }
-
-                // Добавляем обработчики после загрузки DOM
-                document.addEventListener('DOMContentLoaded', function() {
-                  if (isMobile()) {
-                    // Блокируем touch события на неинтерактивных элементах
-                    document.addEventListener('touchstart', blockEvent, { passive: false, capture: true });
-                    document.addEventListener('touchend', blockEvent, { passive: false, capture: true });
-                    document.addEventListener('click', blockEvent, { passive: false, capture: true });
-                    
-                    console.log('✅ Защита от случайного скролинга активирована');
-                  }
-                });
-              })();
-            `,
-          }}
-        />
+        {/* Базовая оптимизация производительности */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
       </head>
       <body className={`${calleo.className} antialiased bg-background text-foreground overflow-x-hidden`}>
         {children}
