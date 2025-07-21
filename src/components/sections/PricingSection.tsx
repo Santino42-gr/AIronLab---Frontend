@@ -19,8 +19,8 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'template',
     name: 'Шаблонные решения',
-    price: 'от 15 000',
-    period: '₽',
+    price: 'от 15 000 ₽',
+    period: '',
     description: 'Готовые ИИ-решения для быстрого внедрения',
     features: [
       'Готовые чат-боты',
@@ -36,8 +36,8 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'custom',
     name: 'Кастомные решения',
-    price: '30 000',
-    period: '₽',
+    price: 'от 30 000 ₽',
+    period: '',
     description: 'Индивидуальная разработка под ваши задачи',
     features: [
       'Персональная разработка',
@@ -54,8 +54,8 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'integration',
     name: 'Решения с интеграциями',
-    price: 'от 60 000',
-    period: '₽',
+    price: 'от 60 000 ₽',
+    period: '',
     description: 'Комплексная интеграция с вашими системами',
     features: [
       'Интеграция с CRM/ERP',
@@ -71,8 +71,8 @@ const pricingPlans: PricingPlan[] = [
   {
     id: 'unique',
     name: 'Уникальные решения',
-    price: 'от 100 000',
-    period: '₽',
+    price: 'от 100 000 ₽',
+    period: '',
     description: 'Эксклюзивные ИИ-решения с нуля',
     features: [
       'Полная разработка с нуля',
@@ -152,9 +152,11 @@ export default function PricingSection() {
                 <div className="mb-6">
                   <h3 className="text-responsive-h4 text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 text-sm mb-4">{plan.description}</p>
-                  <div className="flex items-baseline mb-4">
-                    <span className="text-responsive-stats text-white">{plan.price}</span>
-                    <span className="text-responsive-body text-gray-400 ml-1">{plan.period}</span>
+                  <div className="mb-4">
+                    <span className="text-responsive-stats text-white whitespace-nowrap">{plan.price}</span>
+                    {plan.period && (
+                      <span className="text-responsive-body text-gray-400 ml-1">{plan.period}</span>
+                    )}
                   </div>
                 </div>
                 {/* Список функций */}
