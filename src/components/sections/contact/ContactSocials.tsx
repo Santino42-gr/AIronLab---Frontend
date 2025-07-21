@@ -10,7 +10,7 @@ export const ContactSocials: React.FC = () => {
       <p className="text-blue-100 mb-8">Следите за новостями, кейсами и обновлениями AIronLab</p>
       
       {/* Сетка социальных сетей */}
-      <div className="grid grid-cols-2 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8">
         {/* Telegram */}
         <a 
           href="https://t.me/Aironlab" 

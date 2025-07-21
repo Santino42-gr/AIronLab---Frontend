@@ -193,25 +193,25 @@ export default function PricingSection() {
 
         {/* Дополнительная информация */}
         <div className="text-center">
-          <div className="inline-flex items-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 mb-8">
-            <div className="flex items-center space-x-8">
-              <div className="flex items-center text-gray-300">
-                <svg className="w-6 h-6 text-green-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+          <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-4 sm:p-6 mb-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
+              <div className="flex items-center justify-center sm:justify-start text-gray-300">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-green-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Без скрытых платежей</span>
+                <span className="text-sm sm:text-base">Без скрытых платежей</span>
               </div>
-              <div className="flex items-center text-gray-300">
-                <svg className="w-6 h-6 text-blue-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex items-center justify-center sm:justify-start text-gray-300">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span>Гарантия результата</span>
+                <span className="text-sm sm:text-base">Гарантия результата</span>
               </div>
-              <div className="flex items-center text-gray-300">
-                <svg className="w-6 h-6 text-purple-400 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <div className="flex items-center justify-center sm:justify-start text-gray-300">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                 </svg>
-                <span>Бесплатная консультация</span>
+                <span className="text-sm sm:text-base">Бесплатная консультация</span>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { scrollToSection } from '@/lib/utils';
 
 interface FAQItem {
@@ -96,13 +96,15 @@ export default function FAQSection() {
   const [activeItem, setActiveItem] = useState<string | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  const toggleItem = (itemId: string) => {
-    setActiveItem(activeItem === itemId ? null : itemId);
-  };
+  const toggleItem = useCallback((itemId: string) => {
+    setActiveItem(current => current === itemId ? null : itemId);
+  }, []);
 
-  const filteredFAQs = selectedCategory === 'all' 
-    ? faqData 
-    : faqData.filter(item => item.category === selectedCategory);
+  const filteredFAQs = useMemo(() => {
+    return selectedCategory === 'all' 
+      ? faqData 
+      : faqData.filter(item => item.category === selectedCategory);
+  }, [selectedCategory]);
 
   return (
     <section id="faq" className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden non-interactive" data-scroll-container="true">
@@ -184,7 +186,7 @@ export default function FAQSection() {
                   </div>
                   
                   {/* Иконка стрелки */}
-                  <div className={`flex-shrink-0 w-6 h-6 transition-transform duration-300 ${
+                  <div className={`flex-shrink-0 w-6 h-6 transition-transform duration-200 ${
                     activeItem === item.id ? 'rotate-180' : ''
                   }`}>
                     <svg className="w-full h-full text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -194,8 +196,8 @@ export default function FAQSection() {
                 </button>
 
                 {/* Ответ (раскрывающийся контент) */}
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  activeItem === item.id ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                <div className={`overflow-hidden transition-all duration-300 ease-out ${
+                  activeItem === item.id ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="px-8 pb-6">
                     <div className="pt-2 border-t border-gray-100">
