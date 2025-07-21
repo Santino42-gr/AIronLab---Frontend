@@ -289,38 +289,52 @@
     background: #a8a8a8;
   }
 
-  /* КРИТИЧЕСКИЕ ПРАВИЛА ДЛЯ МОБИЛЬНЫХ - РАДИКАЛЬНАЯ ЗАЩИТА ОТ СЛУЧАЙНОГО СКРОЛИНГА */
+  /* БАЗОВЫЕ НАСТРОЙКИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
   html {
-    touch-action: manipulation;
+    touch-action: pan-y pinch-zoom;
     -webkit-text-size-adjust: 100%;
     -webkit-touch-callout: none;
     -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
   }
 
   body {
     overscroll-behavior: contain;
-    touch-action: manipulation;
+    touch-action: pan-y pinch-zoom;
     -webkit-overflow-scrolling: touch;
-    -webkit-user-select: none;
-    user-select: none;
   }
 
-  /* РАДИКАЛЬНАЯ ЗАЩИТА - ВСЕ ПО УМОЛЧАНИЮ НЕ КЛИКАБЕЛЬНО НА МОБИЛЬНЫХ */
+  /* ЗАЩИТА ОТ СЛУЧАЙНЫХ КЛИКОВ НА МОБИЛЬНЫХ (БОЛЕЕ МЯГКАЯ) */
   @media (max-width: 768px) {
-    * {
-      touch-action: pan-y pinch-zoom !important;
+    /* Базовая защита для всей страницы */
+    html, body {
+      touch-action: pan-y pinch-zoom;
+      -webkit-text-size-adjust: 100%;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Блокируем только декоративные элементы */
+    .non-interactive,
+    .animate-float,
+    .animate-float-delayed,
+    .animate-twinkle,
+    .animate-pulse-slow,
+    div[class*="absolute"][class*="bg-"],
+    div[class*="blur-"] {
       pointer-events: none !important;
       user-select: none !important;
       -webkit-user-select: none !important;
       -webkit-touch-callout: none !important;
-      cursor: default !important;
     }
     
-    /* ТОЛЬКО ЯВНО РАЗРЕШЕННЫЕ ЭЛЕМЕНТЫ КЛИКАБЕЛЬНЫ */
+    /* РАЗРЕШЕННЫЕ ИНТЕРАКТИВНЫЕ И СКРОЛЛИРУЕМЫЕ ЭЛЕМЕНТЫ */
+    body,
+    main,
+    section,
+    article,
+    .container,
+    .container-custom,
+    [data-scroll-container="true"],
     button,
     a,
     input,
@@ -330,19 +344,19 @@
     [role="button"] {
       pointer-events: auto !important;
       touch-action: manipulation !important;
+    }
+
+    /* Специально для кликабельных элементов */
+    button,
+    a,
+    input,
+    select,
+    textarea,
+    [data-clickable="true"],
+    [role="button"] {
       cursor: pointer !important;
       user-select: text !important;
     }
-
-         /* Разрешить скролинг для основного контента */
-     body,
-     main,
-     .container,
-     .container-custom,
-     [data-scroll-container="true"] {
-       pointer-events: auto !important;
-       touch-action: pan-y pinch-zoom !important;
-     }
 
     /* Формы должны работать */
     form,
