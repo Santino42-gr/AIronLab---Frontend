@@ -147,7 +147,7 @@ const generateContactEmailHtml = (data) => {
     <div class="container">
         <div class="header">
             <h1>🚀 Новая заявка</h1>
-            <p>Получена с сайта AIronLab в ${timestamp}</p>
+            <p>Получена с сайта AIronLab ${timestamp}</p>
         </div>
         
         <div class="content">
