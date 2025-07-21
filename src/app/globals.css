@@ -384,6 +384,14 @@
     cursor: pointer !important;
   }
 
+  /* Базовые стили для кликабельных элементов */
+  button,
+  a,
+  [data-clickable="true"],
+  [role="button"] {
+    cursor: pointer;
+  }
+
   [data-clickable="true"] * {
     pointer-events: auto !important;
   }

@@ -180,7 +180,7 @@ export const Header: React.FC = () => {
           "lg:hidden overflow-hidden transition-all duration-300 ease-in-out",
           isMobileMenuOpen 
             ? "max-h-96 opacity-100" 
-            : "max-h-0 opacity-0"
+            : "max-h-0 opacity-0 hidden"
         )}>
           <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-white/20 shadow-xl z-40">
             <div className="container-custom py-6 space-y-3">
