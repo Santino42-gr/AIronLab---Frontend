@@ -145,9 +145,9 @@ export const HeroSection: React.FC = () => {
             <img
               src={getImagePath("/images/icon.png")}
               alt="AIronLab Icon"
-              className="h-12 sm:h-16 md:h-20 object-contain"
+              className="h-12 sm:h-16 md:h-20 object-contain transition-all duration-300 hover:rotate-12 hover:scale-110 cursor-pointer"
             />
-            <h1 className="text-responsive-h1 font-bold text-black">
+            <h1 className="text-responsive-h1 font-bold text-black transition-all duration-300 hover:scale-105 cursor-pointer">
               AIronLab
             </h1>
           </div>
