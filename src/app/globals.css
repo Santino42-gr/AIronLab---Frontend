@@ -291,71 +291,39 @@
 
   /* БАЗОВЫЕ НАСТРОЙКИ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ */
   html {
-    touch-action: pan-y pinch-zoom;
     -webkit-text-size-adjust: 100%;
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: transparent;
   }
 
   body {
-    overscroll-behavior: contain;
-    touch-action: pan-y pinch-zoom;
     -webkit-overflow-scrolling: touch;
   }
 
-  /* ЗАЩИТА ОТ СЛУЧАЙНЫХ КЛИКОВ НА МОБИЛЬНЫХ (БОЛЕЕ МЯГКАЯ) */
+  /* ПРОСТАЯ ЗАЩИТА ОТ СЛУЧАЙНЫХ КЛИКОВ НА МОБИЛЬНЫХ */
   @media (max-width: 768px) {
-    /* Базовая защита для всей страницы */
-    html, body {
-      touch-action: pan-y pinch-zoom;
-      -webkit-text-size-adjust: 100%;
-      -webkit-touch-callout: none;
+    /* Убираем подсветку при нажатии */
+    * {
       -webkit-tap-highlight-color: transparent;
+      -webkit-touch-callout: none;
     }
     
-    /* Блокируем только декоративные элементы */
+    /* Блокируем только явно декоративные элементы */
     .non-interactive,
     .animate-float,
     .animate-float-delayed,
     .animate-twinkle,
-    .animate-pulse-slow,
-    div[class*="absolute"][class*="bg-"],
-    div[class*="blur-"] {
+    .animate-pulse-slow {
       pointer-events: none !important;
       user-select: none !important;
       -webkit-user-select: none !important;
-      -webkit-touch-callout: none !important;
     }
     
-    /* РАЗРЕШЕННЫЕ ИНТЕРАКТИВНЫЕ И СКРОЛЛИРУЕМЫЕ ЭЛЕМЕНТЫ */
-    body,
-    main,
-    section,
-    article,
-    .container,
-    .container-custom,
-    [data-scroll-container="true"],
-    button,
-    a,
-    input,
-    select,
-    textarea,
-    [data-clickable="true"],
-    [role="button"] {
-      pointer-events: auto !important;
-      touch-action: manipulation !important;
-    }
-
-    /* Специально для кликабельных элементов */
-    button,
-    a,
-    input,
-    select,
-    textarea,
-    [data-clickable="true"],
-    [role="button"] {
-      cursor: pointer !important;
+    /* Разрешаем выделение текста в полях ввода */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
       user-select: text !important;
+      -webkit-user-select: text !important;
     }
 
     /* Формы должны работать */
@@ -374,18 +342,13 @@
     }
   }
 
-  /* БЛОКИРОВКА ДЕКОРАТИВНЫХ ЭЛЕМЕНТОВ НА ВСЕХ УСТРОЙСТВАХ */
-  .non-interactive {
+  /* БЛОКИРОВКА ТОЛЬКО АНИМИРОВАННЫХ ДЕКОРАТИВНЫХ ЭЛЕМЕНТОВ */
+  .non-interactive.animate-float,
+  .non-interactive.animate-float-delayed,
+  .non-interactive.animate-twinkle,
+  .non-interactive.animate-pulse-slow,
+  .non-interactive[class*="absolute"] {
     pointer-events: none !important;
-    touch-action: none !important;
-    user-select: none !important;
-    -webkit-user-select: none !important;
-    cursor: default !important;
-  }
-
-  .non-interactive * {
-    pointer-events: none !important;
-    touch-action: none !important;
     user-select: none !important;
     -webkit-user-select: none !important;
     cursor: default !important;
@@ -394,7 +357,6 @@
   /* РАЗРЕШЕННЫЕ ИНТЕРАКТИВНЫЕ ЭЛЕМЕНТЫ */
   [data-clickable="true"] {
     pointer-events: auto !important;
-    touch-action: manipulation !important;
     cursor: pointer !important;
   }
 
