@@ -1,5 +1,5 @@
-const nodemailer = require('nodemailer');
-const { logger } = require('../utils/logger');
+const nodemailer = require("nodemailer");
+const { logger } = require("../utils/logger");
 
 let transporter = null;
 
@@ -10,30 +10,30 @@ const getTransporter = async () => {
   }
 
   try {
-    transporter = nodemailer.createTransporter({
+    transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT) || 465,
-      secure: process.env.SMTP_SECURE === 'true',
+      secure: process.env.SMTP_SECURE === "true",
       auth: {
         user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
+        pass: process.env.SMTP_PASS,
       },
       tls: {
-        rejectUnauthorized: false
-      }
+        rejectUnauthorized: false,
+      },
     });
 
     // Проверяем соединение
     await transporter.verify();
-    logger.info('✅ SMTP соединение установлено успешно');
+    logger.info("✅ SMTP соединение установлено успешно");
 
     return transporter;
   } catch (error) {
-    logger.error('❌ Ошибка создания SMTP транспорта:', error);
+    logger.error("❌ Ошибка создания SMTP транспорта:", error);
     throw error;
   }
 };
 
 module.exports = {
-  getTransporter
-}; 
+  getTransporter,
+};

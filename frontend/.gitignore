@@ -43,3 +43,6 @@ next-env.d.ts
 
 # OS
 Thumbs.db 
+
+# из за разных ос устанавливаются разные версии пакетов, поэтому нужно исключить package-lock.json
+package-lock.json
