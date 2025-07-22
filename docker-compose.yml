@@ -34,6 +34,13 @@ services:
       - FRONTEND_URL=http://frontend:3000
       - RATE_LIMIT_WINDOW_MS=900000
       - RATE_LIMIT_MAX_REQUESTS=5
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.rule=Host(`aironlab.ru`) && PathPrefix(`/api`)" # Поменять тут домен
+      - "traefik.http.routers.backend.entrypoints=web,websecure"
+      - "traefik.http.routers.backend.tls=true"
+      - "traefik.http.routers.backend.tls.certresolver=myresolver"
+      - "traefik.http.services.backend.loadbalancer.server.port=3001" # поставить сюда порт приложения к которому будут идти запросы из сети
 
     restart: unless-stopped
 
@@ -41,15 +48,9 @@ services:
     build:
       context: ./frontend
       dockerfile: ./Dockerfile
-      args:
-        - NEXT_PUBLIC_API_URL=http://backend:3001
-        - REACT_APP_API_URL=http://backend:3001
     container_name: frontend
     ports:
       - "3000:3000"
-    environment:
-      - NEXT_PUBLIC_API_URL=http://backend:3001
-      - REACT_APP_API_URL=http://backend:3001
     restart: unless-stopped
     depends_on:
       - reverse-proxy
