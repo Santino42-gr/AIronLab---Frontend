@@ -24,9 +24,6 @@ services:
     build:
       context: ./backend
       dockerfile: ./Dockerfile
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
     container_name: backend
     ports:
       - "3001:3001"
@@ -44,9 +41,6 @@ services:
     build:
       context: ./frontend
       dockerfile: ./Dockerfile
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
     container_name: frontend
     ports:
       - "3000:3000"
