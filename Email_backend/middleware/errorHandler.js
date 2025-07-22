@@ -1,54 +1,64 @@
 const { logger } = require('../utils/logger');
 
-const errorHandler = (err, req, res, next) => {
-  logger.error('Необработанная ошибка:', err);
+// Обертка для асинхронных функций
+const asyncHandler = (fn) => (req, res, next) => {
+  Promise.resolve(fn(req, res, next)).catch(next);
+};
 
-  // Joi validation errors
+// Обработчик ошибок
+const errorHandler = (err, req, res, next) => {
+  logger.error('Ошибка обработки запроса:', {
+    error: err.message,
+    stack: err.stack,
+    url: req.url,
+    method: req.method,
+    ip: req.ip,
+    userAgent: req.get('User-Agent')
+  });
+
+  // Ошибки валидации
   if (err.isJoi) {
-    const errorMessage = err.details
-      .map(detail => detail.message)
-      .join('; ');
-    
     return res.status(400).json({
       error: 'Ошибка валидации данных',
-      message: errorMessage,
-      code: 'VALIDATION_ERROR'
+      message: err.details[0].message,
+      code: 'VALIDATION_ERROR',
+      details: err.details
     });
   }
 
-  // SMTP errors
-  if (err.code === 'EAUTH' || err.code === 'ECONNECTION') {
-    logger.error('SMTP ошибка:', err);
+  // SMTP ошибки
+  if (err.code && ['EAUTH', 'ECONNECTION', 'ETIMEDOUT'].includes(err.code)) {
     return res.status(500).json({
-      error: 'Ошибка почтового сервера',
-      message: 'Не удалось отправить email. Попробуйте позже.',
-      code: 'EMAIL_SERVICE_ERROR'
+      error: 'Ошибка отправки email',
+      message: err.message,
+      code: 'SMTP_ERROR'
     });
   }
 
-  // Rate limiting errors
-  if (err.type === 'request.entity.too.large') {
-    return res.status(413).json({
-      error: 'Слишком большой размер запроса',
-      code: 'PAYLOAD_TOO_LARGE'
+  // Rate limit ошибки
+  if (err.status === 429) {
+    return res.status(429).json({
+      error: 'Слишком много запросов',
+      message: 'Попробуйте позже',
+      code: 'RATE_LIMIT_EXCEEDED'
     });
   }
 
-  // Default error
-  const statusCode = err.status || err.statusCode || 500;
-  const message = process.env.NODE_ENV === 'development' 
-    ? err.message 
-    : 'Внутренняя ошибка сервера';
+  // Общие ошибки сервера
+  const statusCode = err.statusCode || 500;
+  const message = process.env.NODE_ENV === 'production' 
+    ? 'Внутренняя ошибка сервера' 
+    : err.message;
 
   res.status(statusCode).json({
-    error: message,
+    error: 'Ошибка сервера',
+    message: message,
     code: 'INTERNAL_ERROR',
     ...(process.env.NODE_ENV === 'development' && { stack: err.stack })
   });
 };
 
-const asyncHandler = (fn) => (req, res, next) => {
-  Promise.resolve(fn(req, res, next)).catch(next);
-};
-
-module.exports = { errorHandler, asyncHandler }; 
+module.exports = {
+  asyncHandler,
+  errorHandler
+}; 

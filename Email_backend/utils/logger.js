@@ -1,28 +1,48 @@
-const logger = {
-  info: (message, ...args) => {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] INFO: ${message}`, ...args);
-  },
-  
-  error: (message, error = null, ...args) => {
-    const timestamp = new Date().toISOString();
-    console.error(`[${timestamp}] ERROR: ${message}`, ...args);
-    if (error && error.stack) {
-      console.error(`[${timestamp}] STACK: ${error.stack}`);
-    }
-  },
-  
-  warn: (message, ...args) => {
-    const timestamp = new Date().toISOString();
-    console.warn(`[${timestamp}] WARN: ${message}`, ...args);
-  },
-  
-  debug: (message, ...args) => {
-    if (process.env.NODE_ENV === 'development') {
-      const timestamp = new Date().toISOString();
-      console.log(`[${timestamp}] DEBUG: ${message}`, ...args);
-    }
-  }
-};
+const winston = require('winston');
+
+// Настройка форматирования логов
+const logFormat = winston.format.combine(
+  winston.format.timestamp({
+    format: 'YYYY-MM-DD HH:mm:ss'
+  }),
+  winston.format.errors({ stack: true }),
+  winston.format.json()
+);
+
+// Создание логгера
+const logger = winston.createLogger({
+  level: process.env.LOG_LEVEL || 'info',
+  format: logFormat,
+  defaultMeta: { service: 'aironlab-email-backend' },
+  transports: [
+    // Запись в файл для production
+    ...(process.env.NODE_ENV === 'production' ? [
+      new winston.transports.File({ 
+        filename: 'logs/error.log', 
+        level: 'error' 
+      }),
+      new winston.transports.File({ 
+        filename: 'logs/combined.log' 
+      })
+    ] : []),
+    // Консоль для development
+    new winston.transports.Console({
+      format: winston.format.combine(
+        winston.format.colorize(),
+        winston.format.simple()
+      )
+    })
+  ]
+});
+
+// Если мы не в production, то логируем все в консоль
+if (process.env.NODE_ENV !== 'production') {
+  logger.add(new winston.transports.Console({
+    format: winston.format.combine(
+      winston.format.colorize(),
+      winston.format.simple()
+    )
+  }));
+}
 
 module.exports = { logger }; 
