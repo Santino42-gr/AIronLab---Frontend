@@ -44,6 +44,9 @@ services:
     container_name: frontend
     ports:
       - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://backend:3001
+      - REACT_APP_API_URL=http://backend:3001
     restart: unless-stopped
     depends_on:
       - reverse-proxy
@@ -55,6 +58,7 @@ services:
       - "traefik.http.routers.frontend.tls=true"
       - "traefik.http.routers.frontend.tls.certresolver=myresolver"
       - "traefik.http.services.frontend.loadbalancer.server.port=3000" # поставить сюда порт приложения к которому будут идти запросы из сети
+
 volumes:
   traefik-certs:
     name: traefik_certs
