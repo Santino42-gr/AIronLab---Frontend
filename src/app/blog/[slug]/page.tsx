@@ -115,7 +115,7 @@ const blogPosts: BlogPost[] = [
     date: '2025-01-15',
     readTime: '12 мин',
     tags: ['ИИ', 'Автоматизация', 'Малый бизнес', 'Кейсы'],
-    image: '/images/blog/ChatGPT Image 22 июля 2025 г., 16_23_44.png',
+    image: '/images/blog/article1.png',
     slug: 'ai-smb-automation'
   },
   {
