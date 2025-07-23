@@ -13,7 +13,7 @@ ssh root@45.144.220.239
 ## 2. Переход в директорию проекта
 
 ```bash
-cd ~/project
+cd ~/project/AIronLab.ru
 ```
 
 ---
